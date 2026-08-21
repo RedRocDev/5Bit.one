@@ -38,10 +38,6 @@ export const menuLinks: { path: string; title: string }[] = [
 		title: "Home",
 	},
 	{
-		path: "/neostation/",
-		title: "NeoStation",
-	},
-	{
 		path: "/downloads/",
 		title: "Downloads",
 	},

@@ -32,7 +32,7 @@ const sortedSystems = allSystems.sort((a, b) =>
 const systemsManifest = JSON.parse(
   fs.readFileSync(path.join(systemsDir, "manifest.json"), "utf-8"),
 );
-const systemsVersion: string = systemsManifest.latest_version ?? "—";
+const systemsVersion: string = systemsManifest.latest_version ?? "N/A";
 
 const totalSystems = sortedSystems.length;
 const emulationCompatibleCount = sortedSystems.filter(
@@ -499,7 +499,7 @@ const toc = [
                   </div>
                   <p class="text-base-content/60 text-sm leading-relaxed mb-5">
                     NeoStation's cloud save engine. Saves and states sync
-                    atomically across Windows, Android, macOS, and Linux — no
+                    atomically across Windows, Android, macOS, and Linux, no
                     manual intervention needed.
                   </p>
                   <div class="flex flex-wrap gap-2 mb-5">
@@ -510,7 +510,7 @@ const toc = [
                   <div class="alert alert-info p-3">
                     <Icon name="heroicons:information-circle" class="w-4 h-4 shrink-0" />
                     <span class="text-xs text-base-content/60">
-                      <strong class="text-base-content">Free Plan (4 MB)</strong> is enough for thousands of save files. Optional — NeoStation works fully offline.
+                      <strong class="text-base-content">Free Plan (4 MB)</strong> is enough for thousands of save files. Optional, NeoStation works fully offline.
                     </span>
                   </div>
                   <a href="https://neosync.cloud" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-block mt-5">
@@ -544,7 +544,7 @@ const toc = [
                   <div class="alert alert-info p-3">
                     <Icon name="heroicons:information-circle" class="w-4 h-4 shrink-0" />
                     <span class="text-xs text-base-content/60">
-                      Your collection lives on your hardware — full privacy.
+                      Your collection lives on your hardware, full privacy.
                     </span>
                   </div>
                   <a href="https://romm.app/" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-block mt-5">
@@ -730,7 +730,7 @@ const toc = [
                                   </div>
                                   <div class="min-w-0">
                                     <div class="font-semibold leading-tight text-base-content">{s.system.name}</div>
-                                    <div class="text-[11px] text-base-content/45">{s.system.details?.manufacturer ?? "—"}</div>
+                                    <div class="text-[11px] text-base-content/45">{s.system.details?.manufacturer ?? "N/A"}</div>
                                   </div>
                                 </div>
                               </td>
@@ -741,7 +741,7 @@ const toc = [
                               </td>
                               <td class="hidden md:table-cell px-4 py-3">
                                 <div class="font-mono text-xs text-primary/80 leading-relaxed">
-                                  {s.system.extensions?.map((e: string) => `.${e}`).join("  ") ?? "—"}
+                                  {s.system.extensions?.map((e: string) => `.${e}`).join("  ") ?? "N/A"}
                                 </div>
                               </td>
                             </tr>
