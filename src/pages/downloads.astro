@@ -252,35 +252,49 @@ const systemRequirements = [
           <h2 class="text-3xl font-bold text-base-content">System Requirements</h2>
         </div>
 
-        <div class="overflow-x-auto rounded-box border border-base-content/10">
-          <table class="table">
-            <thead>
-              <tr class="text-base-content/50 text-xs uppercase tracking-wider">
-                <th>Platform</th><th>Min CPU</th><th>Cores</th><th>Min RAM</th><th>Recommended</th><th>Min GPU</th>
-              </tr>
-            </thead>
-            <tbody>
-              {systemRequirements.map(req => (
-                <>
-                  <tr class="hover:bg-base-content/[0.02]">
-                    <td class="flex items-center gap-2 font-bold"><Icon name={req.icon} class="w-5 h-5 text-base-content/50" />{req.platform}</td>
-                    <td class="text-sm">{req.minCpu}</td>
-                    <td class="text-sm">{req.cores}</td>
-                    <td class="text-sm">{req.minRam}</td>
-                    <td><span class="badge badge-primary badge-sm">{req.recRam}</span></td>
-                    <td class="text-sm">{req.minGpu}</td>
-                  </tr>
-                  {req.notes && (
-                    <tr class="bg-base-content/[0.02]">
-                      <td colspan="6" class="text-[11px] text-base-content/50 italic px-4 py-2">
-                        <span class="text-warning/70 mr-1 font-bold">*</span> {req.notes}
+        <div class="overflow-hidden border-t border-base-300">
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-sm">
+              <thead class="sticky top-0 z-10 bg-base-300/80 backdrop-blur">
+                <tr>
+                  <th class="px-4 py-3 text-xs font-bold uppercase tracking-widest text-base-content/50">Platform</th>
+                  <th class="px-4 py-3 text-xs font-bold uppercase tracking-widest text-base-content/50">Min CPU</th>
+                  <th class="px-4 py-3 text-xs font-bold uppercase tracking-widest text-base-content/50">Cores</th>
+                  <th class="px-4 py-3 text-xs font-bold uppercase tracking-widest text-base-content/50">Min RAM</th>
+                  <th class="px-4 py-3 text-xs font-bold uppercase tracking-widest text-base-content/50">Recommended</th>
+                  <th class="px-4 py-3 text-xs font-bold uppercase tracking-widest text-base-content/50">Min GPU</th>
+                </tr>
+              </thead>
+              <tbody>
+                {systemRequirements.map(req => (
+                  <>
+                    <tr class="border-t border-base-300/50 transition-colors hover:bg-base-100/60">
+                      <td class="px-4 py-3">
+                        <div class="flex items-center gap-3">
+                          <div class="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                            <Icon name={req.icon} class="w-5 h-5 text-primary" />
+                          </div>
+                          <div class="font-semibold leading-tight text-base-content">{req.platform}</div>
+                        </div>
                       </td>
+                      <td class="px-4 py-3 text-xs text-base-content/70">{req.minCpu}</td>
+                      <td class="px-4 py-3 text-xs text-base-content/70">{req.cores}</td>
+                      <td class="px-4 py-3 text-xs text-base-content/70">{req.minRam}</td>
+                      <td class="px-4 py-3"><span class="badge badge-primary badge-sm">{req.recRam}</span></td>
+                      <td class="px-4 py-3 text-xs text-base-content/70">{req.minGpu}</td>
                     </tr>
-                  )}
-                </>
-              ))}
-            </tbody>
-          </table>
+                    {req.notes && (
+                      <tr class="bg-base-content/[0.02]">
+                        <td colspan="6" class="px-4 py-3 text-[11px] text-base-content/50 italic">
+                          <span class="text-warning/70 mr-1 font-bold">*</span> {req.notes}
+                        </td>
+                      </tr>
+                    )}
+                  </>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
 
