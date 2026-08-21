@@ -32,7 +32,7 @@ const platforms = [
   {
     name: "Windows",
     version: latestVersion,
-    icon: "heroicons:computer-desktop",
+    icon: "simple-icons:windows",
     color: "text-info",
     bgColor: "bg-info/10",
     borderColor: "hover:border-info/50",
@@ -46,7 +46,7 @@ const platforms = [
   {
     name: "Android",
     version: latestVersion,
-    icon: "heroicons:device-phone-mobile",
+    icon: "simple-icons:android",
     color: "text-success",
     bgColor: "bg-success/10",
     borderColor: "hover:border-success/50",
@@ -73,7 +73,7 @@ const platforms = [
   {
     name: "Linux",
     version: latestVersion,
-    icon: "heroicons:command-line",
+    icon: "simple-icons:linux",
     color: "text-warning",
     bgColor: "bg-warning/10",
     borderColor: "hover:border-warning/50",
@@ -116,7 +116,7 @@ const platforms = [
 const systemRequirements = [
   {
     platform: "Android",
-    icon: "heroicons:device-phone-mobile",
+    icon: "simple-icons:android",
     minCpu: "Cortex-A53 / A55 @ 1.5 GHz",
     cores: "4 Cores",
     minRam: "2 GB",
@@ -127,7 +127,7 @@ const systemRequirements = [
   },
   {
     platform: "Linux ARM64",
-    icon: "heroicons:command-line",
+    icon: "simple-icons:linux",
     minCpu: "Cortex-A53 / A55 @ 1.5 GHz",
     cores: "4 Cores",
     minRam: "1.5 GB",
@@ -138,7 +138,7 @@ const systemRequirements = [
   },
   {
     platform: "Linux x64",
-    icon: "heroicons:command-line",
+    icon: "simple-icons:linux",
     minCpu: "Intel Haswell / AMD Excavator",
     cores: "2 Cores",
     minRam: "2 GB",
@@ -157,7 +157,7 @@ const systemRequirements = [
   },
   {
     platform: "Windows",
-    icon: "heroicons:computer-desktop",
+    icon: "simple-icons:windows",
     minCpu: "Intel i3 4th Gen / AMD FX",
     cores: "2 Cores",
     minRam: "4 GB",
@@ -219,7 +219,7 @@ const systemRequirements = [
           <div class="card card-border bg-base-200 hover:border-primary/50 transition-all duration-300">
             <div class="card-body">
               <div class="size-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-4">
-                <Icon name={p.icon} class="w-8 h-8 text-primary" />
+                <Icon name={p.icon} class={`w-8 h-8 ${p.color}`} />
               </div>
               <h3 class="card-title">{p.name}</h3>
               <p class="text-xs text-base-content/50 font-medium uppercase tracking-wider">{p.requirements}</p>
