@@ -562,9 +562,12 @@ body {
 	animation: scale-in 0.18s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
-.dropdown:focus-within .dropdown-content,
-.dropdown:has(.dropdown-content:focus) .dropdown-content {
-	display: block;
+.dropdown > .dropdown-content {
+	display: none;
+}
+
+.dropdown.open > .dropdown-content {
+	display: flex;
 }
 
 /* -------------------------------------------------------------------------
