@@ -1,6 +1,7 @@
 {
   "system": {
     "id": "ngp",
+    "multidisc": false,
     "name": "NeoGeo Pocket",
     "short_name": "NGP",
     "details": {
@@ -13,12 +14,17 @@
       "screenscraper": 25,
       "retroachievements": 14
     },
+    "ra_hash": {
+      "algo": "file",
+      "mode": "hash_only"
+    },
     "folders": [
       "ngp",
       "Neo Geo Pocket",
       "NeoGeo Pocket",
       "Neo-Geo Pocket",
-      "SNK Neo Geo Pocket"
+      "SNK Neo Geo Pocket",
+      "neo-geo-pocket"
     ],
     "colors": [
       "#90A4AE",
@@ -105,6 +111,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L mednafen_ngp_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -128,6 +136,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L race_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -151,6 +161,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L fbneo_libretro.so \"{file.path}\""
         },
         "macos": {

@@ -1,6 +1,7 @@
 {
   "system": {
     "id": "fds",
+    "multidisc": false,
     "name": "Famicom Disk System",
     "short_name": "FDS",
     "details": {
@@ -11,7 +12,11 @@
     },
     "ids": {
       "screenscraper": 106,
-      "retroachievements": 7
+      "retroachievements": 81
+    },
+    "ra_hash": {
+      "algo": "nes",
+      "mode": "filename_fallback"
     },
     "folders": [
       "fds",
@@ -148,6 +153,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L nestopia_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -172,6 +179,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L fceumm_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -195,6 +204,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L mesen_libretro.so \"{file.path}\""
         },
         "macos": {

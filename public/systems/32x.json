@@ -1,6 +1,7 @@
 {
   "system": {
     "id": "32x",
+    "multidisc": false,
     "name": "Sega 32X",
     "short_name": "32X",
     "details": {
@@ -13,13 +14,18 @@
       "screenscraper": 19,
       "retroachievements": 10
     },
+    "ra_hash": {
+      "algo": "file",
+      "mode": "hash_only"
+    },
     "folders": [
       "32x",
       "sega32x",
       "Sega 32X",
       "THIRTYTWOX",
       "sega32xjp",
-      "sega32xna"
+      "sega32xna",
+      "sega32"
     ],
     "colors": [
       "#212121",
@@ -61,6 +67,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L picodrive_libretro.so \"{file.path}\""
         },
         "macos": {

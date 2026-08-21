@@ -1,6 +1,7 @@
 {
   "system": {
     "id": "lynx",
+    "multidisc": false,
     "name": "Atari Lynx",
     "short_name": "Lynx",
     "details": {
@@ -12,6 +13,10 @@
     "ids": {
       "screenscraper": 28,
       "retroachievements": 13
+    },
+    "ra_hash": {
+      "algo": "lynx",
+      "mode": "hash_only"
     },
     "folders": [
       "lynx",
@@ -124,6 +129,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L mednafen_lynx_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -148,6 +155,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L handy_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -171,6 +180,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L holani_libretro.so \"{file.path}\""
         },
         "macos": {

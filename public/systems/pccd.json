@@ -14,12 +14,17 @@
       "screenscraper": 114,
       "retroachievements": 76
     },
+    "ra_hash": {
+      "algo": "pcecd",
+      "mode": "hash_only"
+    },
     "folders": [
       "pccd",
       "PCEngine CD",
       "NEC PC Engine CD",
       "PCECD",
-      "pcenginecd"
+      "pcenginecd",
+      "turbografx-cd"
     ],
     "colors": [
       "#F5F5F5",
@@ -133,6 +138,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L mednafen_supergrafx_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -156,6 +163,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L mednafen_pce_fast_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -179,6 +188,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L mednafen_pce_libretro.so \"{file.path}\""
         },
         "macos": {

@@ -1,6 +1,7 @@
 {
   "system": {
     "id": "gg",
+    "multidisc": false,
     "name": "Sega Game Gear",
     "short_name": "GG",
     "details": {
@@ -12,6 +13,10 @@
     "ids": {
       "screenscraper": 21,
       "retroachievements": 15
+    },
+    "ra_hash": {
+      "algo": "file",
+      "mode": "hash_only"
     },
     "folders": [
       "gg",
@@ -207,6 +212,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L genesis_plus_gx_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -230,6 +237,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L genesis_plus_gx_wide_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -253,6 +262,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L smsplus_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -276,6 +287,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L picodrive_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -299,6 +312,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L gearsystem_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -322,6 +337,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L fbneo_libretro.so \"{file.path}\""
         },
         "macos": {

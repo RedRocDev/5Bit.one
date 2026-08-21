@@ -3,44 +3,71 @@ import { Icon } from "astro-icon/components";
 import { menuLinks, siteConfig } from "@/site.config";
 ---
 
-<header class="navbar bg-base-100/95 backdrop-blur-sm border-b border-base-content/10 sticky top-0 z-50" id="main-header">
-  <div class="navbar-start">
-    <div class="dropdown lg:hidden">
-      <button tabindex="0" role="button" class="btn btn-ghost btn-square" aria-label="Toggle navigation menu">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-      </button>
-      <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-        {menuLinks.map(link => (
-          <li><a href={link.path} aria-current={Astro.url.pathname === link.path ? "page" : undefined}>{link.title}</a></li>
-        ))}
-      </ul>
+<header class="sticky top-0 z-40 glass border-b border-base-300">
+  <nav class="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6">
+    <div class="flex items-center gap-1.5">
+      <div class="dropdown lg:hidden">
+        <button tabindex="0" role="button" class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-base-300 bg-base-200 text-base-content/70 transition hover:bg-base-300 hover:text-base-content lg:hidden" aria-label="Toggle navigation menu">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+        </button>
+        <ul tabindex="0" class="dropdown-content menu menu-sm mt-3 w-52 bg-base-100/95 backdrop-blur-xl border border-base-300">
+          {menuLinks.map((link) => (
+            <li>
+              <a
+                href={link.path}
+                class="block rounded-lg px-3 py-2 text-sm font-medium transition-colors"
+                aria-current={Astro.url.pathname === link.path ? "page" : undefined}
+              >
+                {link.title}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <a href="/" class="rounded-lg px-1.5 py-1.5">
+        <img src="/neostation-logo-dark-v2.webp" alt={siteConfig.title} class="h-8 w-auto" width="160" height="40" />
+      </a>
     </div>
-    <a href="/" class="btn btn-ghost px-2">
-      <img src="/neostation-logo-dark-v2.webp" alt={siteConfig.title} class="h-10 sm:h-12 w-auto" />
-    </a>
-  </div>
 
-  <div class="navbar-center hidden lg:flex">
-    <ul class="menu menu-horizontal px-1">
-      {menuLinks.map(link => (
-        <li><a href={link.path} class="aria-[current='page']:text-primary aria-[current='page']:font-bold" aria-current={Astro.url.pathname === link.path ? "page" : undefined}>{link.title}</a></li>
-      ))}
-    </ul>
-  </div>
+    <div class="hidden items-center gap-1 lg:flex">
+      {menuLinks.map((link) => {
+        const active = Astro.url.pathname === link.path;
+        return (
+          <a
+            href={link.path}
+            class={`rounded-lg px-3 py-2 text-sm font-medium transition-colors ${
+              active ? "text-base-content" : "text-base-content/60 hover:text-base-content"
+            }`}
+            aria-current={active ? "page" : undefined}
+          >
+            {link.title}
+          </a>
+        );
+      })}
+    </div>
 
-  <div class="navbar-end gap-2">
-    <a href="https://github.com/misobadev/neostation-frontend" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-sm" aria-label="NeoStation source code on GitHub (GPL v3)">
-      <Icon name="simple-icons:github" class="w-4 h-4" />
-      <span class="hidden sm:inline">GPL v3</span>
-    </a>
-    <a href="https://discord.gg/xE2kgKsRVq" target="_blank" rel="noopener noreferrer" class="btn btn-square btn-sm" style="background-color:#5865F2; color:#fff; border-color:#5865F2;" aria-label="Join our Discord community">
-      <Icon name="simple-icons:discord" class="w-4 h-4" />
-    </a>
-    <a href="https://ko-fi.com/neostation" target="_blank" rel="noopener noreferrer" class="btn btn-square btn-sm" style="background-color:#29ABE2; color:#fff; border-color:#29ABE2;" aria-label="Support development on Ko-fi">
-      <Icon name="simple-icons:kofi" class="w-4 h-4" />
-    </a>
-    <a href="https://www.patreon.com/cw/NeoStation" target="_blank" rel="noopener noreferrer" class="btn btn-square btn-sm" style="background-color:#FF424D; color:#fff; border-color:#FF424D;" aria-label="Become a Patron on Patreon">
-      <Icon name="simple-icons:patreon" class="w-4 h-4" />
-    </a>
-  </div>
+    <div class="flex items-center gap-2">
+      <a
+        href="https://github.com/misobadev/neostation-frontend"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-base-300 bg-base-200 text-base-content/70 transition hover:border-base-300/70 hover:bg-base-300/60 hover:text-base-content"
+        aria-label="NeoStation source code on GitHub (GPL v3)"
+      >
+        <Icon name="simple-icons:github" class="h-4 w-4" />
+      </a>
+      <a
+        href="https://discord.gg/xE2kgKsRVq"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-base-300 bg-base-200 text-base-content/70 transition hover:border-base-300/70 hover:bg-base-300/60 hover:text-base-content"
+        aria-label="Join our Discord community"
+      >
+        <Icon name="simple-icons:discord" class="h-4 w-4" />
+      </a>
+      <a href="/downloads/" class="btn btn-primary h-9 px-4">
+        Get NeoStation
+      </a>
+    </div>
+  </nav>
 </header>

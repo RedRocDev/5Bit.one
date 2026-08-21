@@ -1,109 +1,252 @@
 ---
 import { Icon } from "astro-icon/components";
 import PageLayout from "@/layouts/Base.astro";
+
+const meta = {
+  description:
+    "NeoStation is a modern, multiplatform retro gaming frontend. Beautiful UI, automatic metadata scraping, achievement tracking, cloud saves and deep integrations with the emulation ecosystem.",
+  title: "NeoStation - Modern Retro Gaming Frontend",
+  ogImage: "/screenshots/neostation-01.webp",
+};
+
+const platforms = [
+  { name: "Windows", icon: "simple-icons:windows", color: "text-info", note: "10 / 11 (64-bit)" },
+  { name: "Android", icon: "simple-icons:android", color: "text-success", note: "7.0+ (API 24+)" },
+  { name: "Linux", icon: "simple-icons:linux", color: "text-warning", note: "AppImage (x64 / ARM64)" },
+  { name: "macOS", icon: "simple-icons:apple", color: "text-secondary", note: "Intel & Apple Silicon" },
+];
+
+const integrations = [
+  { name: "NeoSync", img: "/providers/neosync.svg", url: "https://neosync.cloud", note: "Cloud Saves" },
+  { name: "RomM", img: "/providers/romm.svg", url: "https://romm.app/", note: "ROM Manager" },
+  { name: "RetroAchievements", img: "/providers/retroachievements.svg", url: "https://retroachievements.org", note: "Achievements" },
+  { name: "ScreenScraper", img: "/providers/screenscraper.svg", url: "https://www.screenscraper.fr", note: "Metadata" },
+  { name: "RetroArch", img: "/providers/retroarch.svg", url: "https://www.retroarch.com", note: "Emulation" },
+];
 ---
 
-<PageLayout
-  meta={{
-    title: "NeoStation - Modern Retro Gaming Frontend",
-    ogImage: "/screenshots/neostation-01.webp",
-  }}
->
-  <!-- Hero Section -->
-  <div class="hero py-16 md:py-24">
-    <div class="hero-content text-center max-w-3xl">
-      <div class="space-y-8">
-        <h1 class="text-4xl md:text-6xl font-bold tracking-tight">
-          The <span class="text-primary">Multiplatform</span> Frontend.
-        </h1>
-        <p class="text-lg md:text-xl text-base-content/60 max-w-2xl mx-auto leading-relaxed">
-          A unified gaming experience for Windows, Android, macOS, and Linux.
-          Beautiful UI, automatic metadata scraping, achievement tracking and
-          cross-device save sync.
-        </p>
-        <div class="flex flex-wrap justify-center gap-4 pt-4">
-          <a href="/downloads/" class="btn btn-primary btn-lg">
-            Get Started
-            <Icon name="heroicons:arrow-right" class="w-5 h-5" />
-          </a>
-          <a href="/guide/" class="btn btn-ghost btn-lg">
-            User Guide
-          </a>
+<PageLayout meta={meta}>
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div
+      class="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_0%,color-mix(in_oklab,var(--color-primary)_20%,transparent),transparent)] pointer-events-none"
+      aria-hidden="true"
+    ></div>
+    <div class="max-w-7xl mx-auto px-4 relative">
+      <div class="hero py-12 md:py-20">
+        <div class="hero-content text-center max-w-4xl">
+          <div class="space-y-10">
+            <div
+              class="inline-flex items-center gap-2 px-4 py-2 bg-base-content/5 rounded-full border border-base-content/20 text-xs font-bold text-base-content/70 uppercase tracking-widest"
+            >
+              <Icon name="heroicons:sparkles" class="w-4 h-4 text-primary" />
+              Modern Retro Gaming Frontend
+            </div>
+            <h1 class="text-5xl md:text-7xl font-black tracking-tight leading-[1.05]">
+              The <span class="text-primary">Multiplatform</span> Frontend.
+            </h1>
+            <p class="text-lg md:text-xl text-base-content/60 max-w-2xl mx-auto leading-relaxed">
+              A unified gaming experience for Windows, Android, macOS, and Linux.
+              Beautiful UI, automatic metadata scraping, achievement tracking and
+              cross-device save sync — built for the emulation ecosystem.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+              <a href="/downloads/" class="btn btn-primary btn-lg px-8 shadow-xl shadow-primary/20">
+                Get Started
+                <Icon name="heroicons:arrow-right" class="w-5 h-5" />
+              </a>
+              <a href="/guide/" class="btn btn-ghost btn-lg px-8 border border-base-content/20">
+                User Guide
+              </a>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-4 max-w-2xl mx-auto">
+              {platforms.map((p) => (
+                <div class="card card-border bg-base-200/70">
+                  <div class="card-body flex flex-col items-center gap-3 p-5 text-center min-h-[7.5rem]">
+                    <div class="flex items-center justify-center h-9">
+                      <Icon name={p.icon} class={`w-8 h-8 ${p.color}`} />
+                    </div>
+                    <div class="min-w-0">
+                      <div class="text-sm font-bold leading-tight">{p.name}</div>
+                      <div class="text-[10px] text-base-content/50 leading-snug mt-0.5">{p.note}</div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- Features Grid -->
-  <section class="mb-20">
-    <h2 class="text-3xl md:text-4xl font-bold text-primary tracking-tight mb-12 text-center">
-      Why NeoStation?
-    </h2>
+  <!-- Screenshot Slider -->
+  <section class="max-w-7xl mx-auto px-4 mb-24">
+    <div class="relative max-w-5xl mx-auto">
+      <div
+        class="relative w-full aspect-video rounded-3xl overflow-hidden shadow-2xl border border-base-content/20 bg-base-200"
+        id="hero-slider"
+      >
+        {[1, 2, 3, 4].map((num, index) => (
+          <img
+            src={`/screenshots/neostation-0${num}.webp`}
+            alt={`NeoStation Interface ${num}`}
+            class={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${index === 0 ? "opacity-100" : "opacity-0"}`}
+            data-index={index}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
 
-    <div class="grid md:grid-cols-3 gap-6">
-      <!-- Card 1 -->
-      <div class="card card-border bg-base-200 transition-all duration-500 group">
-        <figure class="overflow-hidden aspect-video">
-          <img src="/home/stunning.webp" alt="Stunning UI" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-        </figure>
-        <div class="card-body">
-          <div class="flex items-center gap-3 mb-2">
-            <div class="size-10 rounded-xl bg-primary/10 flex items-center justify-center">
-              <Icon name="heroicons:paint-brush" class="w-5 h-5 text-primary" />
+  <!-- Instant Setup -->
+  <section class="max-w-7xl mx-auto px-4 mb-24">
+    <div class="card bg-base-200 border border-base-content/10 overflow-hidden relative">
+      <div
+        class="absolute inset-0 bg-[radial-gradient(ellipse_50%_60%_at_80%_20%,color-mix(in_oklab,var(--color-primary)_14%,transparent),transparent)] pointer-events-none"
+        aria-hidden="true"
+      ></div>
+      <div class="card-body relative p-10 md:p-16">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div class="space-y-8">
+            <div
+              class="inline-flex items-center gap-2 px-4 py-1.5 bg-success/10 rounded-full border border-success/20 text-xs font-bold text-success uppercase tracking-widest"
+            >
+              <Icon name="heroicons:bolt" class="w-4 h-4" />
+              Set up in seconds
             </div>
-            <h3 class="card-title">Stunning UI</h3>
+            <h2 class="text-3xl md:text-5xl font-black tracking-tight leading-tight">
+              Point to your ROMs folder.
+              <span class="text-success">That's it.</span>
+            </h2>
+            <p class="text-base-content/60 text-lg leading-relaxed">
+              No per-system configuration. No hours of tweaking. NeoStation
+              scans your directory, auto-detects each system, and pulls the
+              metadata and artwork automatically.
+            </p>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <div class="size-8 rounded-lg bg-success/10 flex items-center justify-center shrink-0">
+                  <Icon name="heroicons:folder-open" class="w-4 h-4 text-success" />
+                </div>
+                <div>
+                  <div class="text-sm font-bold">Select your ROMs directory</div>
+                  <div class="text-sm text-base-content/60">One time, done in a minute.</div>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="size-8 rounded-lg bg-success/10 flex items-center justify-center shrink-0">
+                  <Icon name="heroicons:magnifying-glass-circle" class="w-4 h-4 text-success" />
+                </div>
+                <div>
+                  <div class="text-sm font-bold">Everything is auto-detected</div>
+                  <div class="text-sm text-base-content/60">Systems, games, artwork, and descriptions.</div>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="size-8 rounded-lg bg-success/10 flex items-center justify-center shrink-0">
+                  <Icon name="heroicons:adjustments-horizontal" class="w-4 h-4 text-success" />
+                </div>
+                <div>
+                  <div class="text-sm font-bold">Optional deep customization</div>
+                  <div class="text-sm text-base-content/60">Tweak per-system settings only if you want more control.</div>
+                </div>
+              </li>
+            </ul>
+            <a href="/guide/" class="btn btn-success">
+              See the quick start
+              <Icon name="heroicons:arrow-right" class="w-4 h-4" />
+            </a>
           </div>
-          <p class="text-base-content/60 text-sm">Forget boring lists. Browsing your library should be as fun as playing it. Experience rich visuals and smooth animations designed for the modern era.</p>
+
+          <div class="relative hidden lg:block">
+            <div class="relative aspect-video rounded-3xl overflow-hidden shadow-2xl border border-base-content/20 bg-base-100">
+              <img
+                src="/home/plug-and-play.webp"
+                alt="NeoStation instant library setup"
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+              <div class="absolute bottom-4 left-4 right-4">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-black/50 backdrop-blur rounded-full text-xs font-bold text-success">
+                  <Icon name="heroicons:check-circle" class="w-4 h-4" />
+                  Ready to play
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <!-- Card 2 -->
-      <div class="card card-border bg-base-200 transition-all duration-500 group">
-        <figure class="overflow-hidden aspect-video">
-          <img src="/home/neosync.webp" alt="Cloud Sync" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-        </figure>
-        <div class="card-body">
-          <div class="flex items-center gap-3 mb-2">
-            <div class="size-10 rounded-xl bg-info/10 flex items-center justify-center">
-              <Icon name="heroicons:cloud-arrow-up" class="w-5 h-5 text-info" />
-            </div>
-            <h3 class="card-title">Cloud Sync</h3>
+  <!-- Integrations Strip -->
+  <section class="max-w-7xl mx-auto px-4 mb-24">
+    <div class="card card-border bg-base-200 overflow-hidden">
+      <div class="card-body p-8 md:p-12">
+        <div class="text-center mb-10">
+          <div
+            class="inline-flex items-center gap-2 px-4 py-1.5 bg-primary/10 rounded-full border border-primary/20 text-xs font-bold text-primary uppercase tracking-widest mb-5"
+          >
+            <Icon name="heroicons:bolt" class="w-4 h-4" />
+            Native Integrations
           </div>
-          <p class="text-base-content/60 text-sm">Sync your saves across devices effortlessly. Connect your preferred sync provider. Start on your PC, pick up on your handheld.</p>
+          <h2 class="text-3xl md:text-4xl font-black text-base-content tracking-tight">
+            Works with the tools you already <span class="text-primary">love.</span>
+          </h2>
+          <p class="text-base-content/60 mt-4 max-w-xl mx-auto">
+            NeoStation plugs directly into the services powering the modern
+            emulation scene.
+          </p>
         </div>
-      </div>
 
-      <!-- Card 3 -->
-      <div class="card card-border bg-base-200 transition-all duration-500 group">
-        <figure class="overflow-hidden aspect-video">
-          <img src="/home/plug-and-play.webp" alt="Plug & Play" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-        </figure>
-        <div class="card-body">
-          <div class="flex items-center gap-3 mb-2">
-            <div class="size-10 rounded-xl bg-warning/10 flex items-center justify-center">
-              <Icon name="heroicons:rocket-launch" class="w-5 h-5 text-warning" />
-            </div>
-            <h3 class="card-title">Plug & Play</h3>
-          </div>
-          <p class="text-base-content/60 text-sm">No complex configuration files. Intelligent scanning detects your games automatically so you can spend your time playing, not tweaking.</p>
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+          {integrations.map((i) => (
+            <a
+              href={i.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group flex flex-col items-center gap-3 rounded-2xl border border-base-300 bg-base-100 p-6 text-center transition-all hover:border-primary/50 hover:bg-base-content/5"
+            >
+              <div class="size-14 flex items-center justify-center p-2.5">
+                <img
+                  src={i.img}
+                  alt={i.name}
+                  class="w-full h-full object-contain opacity-80 transition-opacity group-hover:opacity-100"
+                />
+              </div>
+              <div>
+                <div class="text-sm font-bold text-base-content">{i.name}</div>
+                <div class="text-[11px] text-base-content/50">{i.note}</div>
+              </div>
+            </a>
+          ))}
+        </div>
+
+        <div class="text-center mt-10">
+          <a href="/integrations/" class="btn btn-ghost border border-base-content/20">
+            Explore all integrations
+            <Icon name="heroicons:arrow-right" class="w-4 h-4" />
+          </a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Support Section -->
-  <section class="mb-20">
-    <div class="card bg-base-200">
-      <div class="card-body">
+  <section class="max-w-7xl mx-auto px-4 mb-24">
+    <div class="card bg-base-200 border border-base-content/10">
+      <div class="card-body p-10 md:p-16">
         <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
           <div class="text-center lg:text-left space-y-6 max-w-2xl">
-            <h2 class="text-3xl md:text-5xl font-bold tracking-tight">
+            <h2 class="text-3xl md:text-5xl font-black tracking-tight">
               Support <span class="text-primary">NeoStation.</span>
             </h2>
             <p class="text-base-content/60 text-lg leading-relaxed">
               NeoStation is a labor of love and remains free for everyone. Your
-              support helps me cover infrastructure costs and allows me to
-              dedicate more time to improving the project.
+              support helps cover infrastructure costs and allows me to dedicate
+              more time to improving the project.
             </p>
           </div>
 
@@ -158,6 +301,20 @@ import PageLayout from "@/layouts/Base.astro";
 </div>
 
 <script>
+  let currentSlide = 0;
+  const slides = document.querySelectorAll("#hero-slider img");
+  const totalSlides = slides.length;
+
+  if (totalSlides > 0) {
+    setInterval(() => {
+      slides[currentSlide]!.classList.remove("opacity-100");
+      slides[currentSlide]!.classList.add("opacity-0");
+      currentSlide = (currentSlide + 1) % totalSlides;
+      slides[currentSlide]!.classList.remove("opacity-0");
+      slides[currentSlide]!.classList.add("opacity-100");
+    }, 5000);
+  }
+
   function openModal(imageSrc: string) {
     const modal = document.getElementById("imageModal");
     const modalImage = document.getElementById("modalImage") as HTMLImageElement | null;

@@ -1,6 +1,7 @@
 {
   "system": {
     "id": "aw",
+    "multidisc": false,
     "name": "Atomiswave",
     "short_name": "AW",
     "details": {
@@ -12,6 +13,10 @@
     "ids": {
       "screenscraper": 53,
       "retroachievements": 27
+    },
+    "ra_hash": {
+      "algo": "arcade",
+      "mode": "hash_only"
     },
     "folders": [
       "aw",
@@ -105,6 +110,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L flycast_libretro.so \"{file.path}\""
         },
         "macos": {

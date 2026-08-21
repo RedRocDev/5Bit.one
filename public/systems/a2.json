@@ -1,6 +1,7 @@
 {
   "system": {
     "id": "a2",
+    "multidisc": false,
     "name": "Apple II",
     "short_name": "A2",
     "details": {
@@ -12,6 +13,10 @@
     "ids": {
       "screenscraper": 86,
       "retroachievements": 38
+    },
+    "ra_hash": {
+      "algo": "file",
+      "mode": "filename_fallback"
     },
     "folders": [
       "a2",
@@ -59,6 +64,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L applewin_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -82,6 +89,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L mamemess_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -106,6 +115,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L applewin_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -141,6 +152,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L applewin_libretro.so \"{file.path}\""
         },
         "macos": {

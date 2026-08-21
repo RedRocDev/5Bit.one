@@ -1,6 +1,7 @@
 {
   "system": {
     "id": "mo2",
+    "multidisc": false,
     "name": "Magnavox Odyssey 2",
     "short_name": "MO2",
     "details": {
@@ -13,11 +14,16 @@
       "screenscraper": 104,
       "retroachievements": 23
     },
+    "ra_hash": {
+      "algo": "file",
+      "mode": "hash_only"
+    },
     "folders": [
       "mo2",
       "odyssey2",
       "videopac",
-      "Magnavox Odyssey 2"
+      "Magnavox Odyssey 2",
+      "odyssey-2"
     ],
     "colors": [
       "#212121",
@@ -70,6 +76,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L o2em_libretro.so \"{file.path}\""
         },
         "macos": {

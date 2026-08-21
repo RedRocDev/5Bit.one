@@ -14,6 +14,10 @@
       "screenscraper": 22,
       "retroachievements": 39
     },
+    "ra_hash": {
+      "algo": "saturn",
+      "mode": "hash_only"
+    },
     "folders": [
       "sat",
       "saturn",
@@ -176,6 +180,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L mednafen_saturn_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -199,6 +205,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L yabasanshiro_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -222,6 +230,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L yabause_libretro.so \"{file.path}\""
         },
         "macos": {

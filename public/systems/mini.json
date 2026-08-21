@@ -1,6 +1,7 @@
 {
   "system": {
     "id": "mini",
+    "multidisc": false,
     "name": "Pokémon Mini",
     "short_name": "Mini",
     "details": {
@@ -12,6 +13,10 @@
     "ids": {
       "screenscraper": 211,
       "retroachievements": 24
+    },
+    "ra_hash": {
+      "algo": "file",
+      "mode": "hash_only"
     },
     "folders": [
       "mini",
@@ -71,6 +76,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L pokemini_libretro.so \"{file.path}\""
         },
         "macos": {

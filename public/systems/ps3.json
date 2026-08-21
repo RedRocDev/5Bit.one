@@ -1,6 +1,7 @@
 {
   "system": {
     "id": "ps3",
+    "multidisc": false,
     "name": "Sony PlayStation 3",
     "short_name": "PS3",
     "details": {
@@ -40,6 +41,17 @@
       }
     },
     {
+      "name": "Standalone ARMSX3",
+      "unique_id": "ps3.com.armsx3",
+      "description": "Supported extensions: iso.",
+      "is_retroachievements_compatible": false,
+      "platforms": {
+        "android": {
+          "launch_arguments": "-n com.armsx3/com.armsx2.Main -a android.intent.action.VIEW -e path \"{file.path}\""
+        }
+      }
+    },
+    {
       "name": "Standalone RPCS3",
       "unique_id": "ps3.rpcs3",
       "description": "Supported extensions: iso.",
@@ -51,6 +63,8 @@
         },
         "linux": {
           "executable": "rpcs3",
+          "flatpak": "net.rpcs3.RPCS3",
+          "emudeck_launcher": "rpcs3.sh",
           "args": "--no-gui \"{file.path}\""
         },
         "macos": {

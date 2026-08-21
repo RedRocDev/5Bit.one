@@ -12,7 +12,11 @@
     },
     "ids": {
       "screenscraper": 16,
-      "retroachievements": null
+      "retroachievements": 19
+    },
+    "ra_hash": {
+      "algo": "file",
+      "mode": "filename_fallback"
     },
     "folders": [
       "wii",
@@ -94,15 +98,17 @@
         },
         "windows": {
           "executable": "dolphin.exe",
-          "launch_arguments": "-e \"{file.path}\""
+          "args": "-e \"{file.path}\""
         },
         "linux": {
           "executable": "dolphin",
-          "launch_arguments": "-e \"{file.path}\""
+          "flatpak": "org.DolphinEmu.dolphin-emu",
+          "emudeck_launcher": "dolphin-emu.sh",
+          "args": "-e \"{file.path}\""
         },
         "macos": {
           "executable": "dolphin",
-          "launch_arguments": "-e \"{file.path}\""
+          "args": "-e \"{file.path}\""
         }
       }
     },
@@ -114,6 +120,17 @@
       "platforms": {
         "android": {
           "launch_arguments": "-n org.dolphin.ishiirukadark/org.dolphinemu.dolphinemu.ui.main.MainActivity -a android.intent.action.VIEW -d \"{file.uri}\" --activity-clear-task --activity-clear-top --activity-no-history"
+        }
+      }
+    },
+    {
+      "name": "Standalone Dolphin CS",
+      "unique_id": "wii.com.joeyos.dolphinemu",
+      "description": "Supported extensions: ciso, dff, dol, elf, gcm, gcz, iso, tgc, wad, wbfs, rvz.",
+      "is_retroachievements_compatible": false,
+      "platforms": {
+        "android": {
+          "launch_arguments": "-n com.joeyos.dolphinemu/org.dolphinemu.dolphinemu.ui.main.MainActivity -a android.intent.action.VIEW -d \"{file.uri}\" --activity-clear-task --activity-clear-top --activity-no-history"
         }
       }
     },
@@ -145,6 +162,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L dolphin_libretro.so \"{file.path}\""
         },
         "macos": {

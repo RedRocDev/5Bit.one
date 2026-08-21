@@ -14,6 +14,10 @@
       "screenscraper": 61,
       "retroachievements": 41
     },
+    "ra_hash": {
+      "algo": "psp",
+      "mode": "hash_only"
+    },
     "folders": [
       "psp",
       "pspminis",
@@ -49,6 +53,8 @@
         },
         "linux": {
           "executable": "ppsspp",
+          "flatpak": "org.ppsspp.PPSSPP",
+          "emudeck_launcher": "ppsspp.sh",
           "args": "-f {file.path}"
         },
         "macos": {
@@ -119,6 +125,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L ppsspp_libretro.so \"{file.path}\""
         },
         "macos": {

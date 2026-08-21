@@ -1,6 +1,7 @@
 {
   "system": {
     "id": "sfc",
+    "multidisc": false,
     "name": "Super Family Computer",
     "short_name": "SFC",
     "details": {
@@ -13,9 +14,14 @@
       "screenscraper": 4,
       "retroachievements": 3
     },
+    "ra_hash": {
+      "algo": "snes",
+      "mode": "hash_only"
+    },
     "folders": [
       "sfc",
-      "Super Famicom"
+      "Super Famicom",
+      "sfam"
     ],
     "colors": [
       "#EEEEEE",
@@ -488,6 +494,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L snes9x_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -511,6 +519,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L higan_sfc_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -534,6 +544,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L higan_sfc_balanced_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -557,6 +569,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L mednafen_supafaust_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -580,6 +594,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L mednafen_snes_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -603,6 +619,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L snes9x2002_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -626,6 +644,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L snes9x2005_plus_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -649,6 +669,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L snes9x2005_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -672,6 +694,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L snes9x2010_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -695,6 +719,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L bsnes2014_accuracy_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -718,6 +744,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L bsnes2014_balanced_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -741,6 +769,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L bsnes2014_performance_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -764,6 +794,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L bsnes_cplusplus98_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -787,6 +819,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L bsnes_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -810,6 +844,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L bsnes_hd_beta_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -833,6 +869,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L bsnes_mercury_accuracy_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -856,6 +894,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L bsnes_mercury_balanced_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -879,6 +919,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L bsnes_mercury_performance_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -902,6 +944,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L mesen-s_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -925,6 +969,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L fbneo_libretro.so \"{file.path}\""
         },
         "macos": {

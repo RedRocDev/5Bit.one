@@ -1,6 +1,7 @@
 {
   "system": {
     "id": "vb",
+    "multidisc": false,
     "name": "Virtual Boy",
     "short_name": "VB",
     "details": {
@@ -12,6 +13,10 @@
     "ids": {
       "screenscraper": 11,
       "retroachievements": 28
+    },
+    "ra_hash": {
+      "algo": "file",
+      "mode": "hash_only"
     },
     "folders": [
       "vb",
@@ -83,6 +88,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L mednafen_vb_libretro.so \"{file.path}\""
         },
         "macos": {

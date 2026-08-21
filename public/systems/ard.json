@@ -1,6 +1,7 @@
 {
   "system": {
     "id": "ard",
+    "multidisc": false,
     "name": "Arduboy",
     "short_name": "ARD",
     "details": {
@@ -12,6 +13,10 @@
     "ids": {
       "screenscraper": 263,
       "retroachievements": 71
+    },
+    "ra_hash": {
+      "algo": "arduboy",
+      "mode": "hash_only"
     },
     "folders": [
       "ard",
@@ -42,6 +47,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L arduous_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -66,6 +73,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L ardens_libretro.so \"{file.path}\""
         },
         "macos": {

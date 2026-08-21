@@ -1,6 +1,7 @@
 {
   "system": {
     "id": "tg16",
+    "multidisc": false,
     "name": "TurboGrafx-16",
     "short_name": "TG-16",
     "details": {
@@ -12,6 +13,10 @@
     "ids": {
       "screenscraper": 31,
       "retroachievements": 8
+    },
+    "ra_hash": {
+      "algo": "file",
+      "mode": "filename_fallback"
     },
     "folders": [
       "tg16",
@@ -131,6 +136,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L mednafen_supergrafx_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -154,6 +161,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L mednafen_pce_fast_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -177,6 +186,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L mednafen_pce_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -200,6 +211,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L fbneo_libretro.so \"{file.path}\""
         },
         "macos": {

@@ -12,12 +12,17 @@
     },
     "ids": {
       "screenscraper": 171,
-      "retroachievements": null
+      "retroachievements": 77
+    },
+    "ra_hash": {
+      "algo": "file",
+      "mode": "filename_fallback"
     },
     "folders": [
       "jagcd",
       "atarijaguarcd",
-      "Atari Jaguar CD"
+      "Atari Jaguar CD",
+      "atari-jaguar-cd"
     ],
     "colors": [
       "#424242",
@@ -42,6 +47,7 @@
         },
         "linux": {
           "executable": "bigpemu",
+          "emudeck_launcher": "bigpemu.sh",
           "args": "\"{file.path}\""
         }
       }

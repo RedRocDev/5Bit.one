@@ -1,6 +1,7 @@
 {
   "system": {
     "id": "3ds",
+    "multidisc": false,
     "name": "Nintendo 3DS",
     "short_name": "3DS",
     "details": {
@@ -51,6 +52,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L citra_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -74,6 +77,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L citra2018_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -97,6 +102,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L citra_canary_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -188,6 +195,8 @@
         },
         "linux": {
           "executable": "azahar.AppImage",
+          "flatpak": "org.azahar_emu.Azahar",
+          "emudeck_launcher": "azahar.sh",
           "args": "\"{file.path}\""
         },
         "macos": {
@@ -281,6 +290,17 @@
       "platforms": {
         "android": {
           "launch_arguments": "-n io.github.mandarine3ds.mandarine/.activities.EmulationActivity\n  -a android.intent.action.VIEW\n  -d {file.uri}\n  --activity-clear-task\n  --activity-clear-top\n"
+        }
+      }
+    },
+    {
+      "name": "Standalone Mandarine-Neo",
+      "unique_id": "3ds.mandarine.neo",
+      "is_retroachievements_compatible": false,
+      "description": "Supported extensions: 3ds, 3dsx, app, axf, cci, cxi, elf.",
+      "platforms": {
+        "android": {
+          "launch_arguments": "-n io.github.ptyfyre.mandarine.neo/io.github.mandarine3ds.mandarine.activities.EmulationActivity\n  -a android.intent.action.VIEW\n  -d {file.uri}\n  --activity-clear-task\n  --activity-clear-top\n"
         }
       }
     },

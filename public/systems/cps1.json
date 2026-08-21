@@ -1,6 +1,7 @@
 {
   "system": {
     "id": "cps1",
+    "multidisc": false,
     "name": "CP System I",
     "short_name": "CPSI",
     "details": {
@@ -12,6 +13,10 @@
     "ids": {
       "screenscraper": 75,
       "retroachievements": 27
+    },
+    "ra_hash": {
+      "algo": "arcade",
+      "mode": "hash_only"
     },
     "folders": [
       "cps1",
@@ -119,6 +124,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L fbneo_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -142,6 +149,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L fbalpha2012_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -165,6 +174,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L fbalpha2012_cps1_libretro.so \"{file.path}\""
         },
         "macos": {

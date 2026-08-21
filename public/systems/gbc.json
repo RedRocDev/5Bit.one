@@ -1,6 +1,7 @@
 {
   "system": {
     "id": "gbc",
+    "multidisc": false,
     "name": "Game Boy Color",
     "short_name": "GBC",
     "details": {
@@ -12,6 +13,10 @@
     "ids": {
       "screenscraper": 10,
       "retroachievements": 6
+    },
+    "ra_hash": {
+      "algo": "file",
+      "mode": "hash_only"
     },
     "folders": [
       "gbc",
@@ -307,6 +312,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L gambatte_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -330,6 +337,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L gearboy_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -353,6 +362,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L sameboy_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -376,6 +387,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L tgbdual_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -399,6 +412,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L DoubleCherryGB_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -422,6 +437,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L mesen-s_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -445,6 +462,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L vbam_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -468,6 +487,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L mgba_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -513,6 +534,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L bsnes_libretro.so \"{file.path}\""
         },
         "macos": {

@@ -46,8 +46,8 @@ export const menuLinks: { path: string; title: string }[] = [
 		title: "Downloads",
 	},
 	{
-		path: "/sync/",
-		title: "Sync",
+		path: "/integrations/",
+		title: "Integrations",
 	},
 	{
 		path: "/guide/",

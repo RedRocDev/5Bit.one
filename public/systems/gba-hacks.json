@@ -1,6 +1,7 @@
 {
   "system": {
     "id": "gba-hacks",
+    "multidisc": false,
     "name": "Game Boy Advance Hacks",
     "short_name": "GBAH",
     "details": {
@@ -12,6 +13,10 @@
     "ids": {
       "screenscraper": 12,
       "retroachievements": 5
+    },
+    "ra_hash": {
+      "algo": "file",
+      "mode": "hash_only"
     },
     "folders": [
       "gbah",
@@ -264,6 +269,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L vba_next_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -287,6 +294,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L vbam_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -311,6 +320,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L mgba_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -334,6 +345,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L mednafen_gba_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -357,6 +370,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L gpsp_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -380,6 +395,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L meteor_libretro.so \"{file.path}\""
         },
         "macos": {

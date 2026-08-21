@@ -1,6 +1,7 @@
 {
   "system": {
     "id": "7800",
+    "multidisc": false,
     "name": "Atari 7800",
     "short_name": "A7800",
     "details": {
@@ -12,6 +13,10 @@
     "ids": {
       "screenscraper": 41,
       "retroachievements": 51
+    },
+    "ra_hash": {
+      "algo": "atari7800",
+      "mode": "hash_only"
     },
     "folders": [
       "7800",
@@ -48,6 +53,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L prosystem_libretro.so \"{file.path}\""
         },
         "macos": {

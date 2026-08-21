@@ -1,6 +1,7 @@
 {
   "system": {
     "id": "satellaview",
+    "multidisc": false,
     "name": "Nintendo Satellaview",
     "short_name": "SV",
     "details": {
@@ -12,6 +13,10 @@
     "ids": {
       "screenscraper": 107,
       "retroachievements": null
+    },
+    "ra_hash": {
+      "algo": "snes",
+      "mode": "hash_only"
     },
     "folders": [
       "satellaview",
@@ -268,6 +273,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L snes9x_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -291,6 +298,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L mednafen_supafaust_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -314,6 +323,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L mednafen_snes_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -337,6 +348,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L snes9x2002_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -360,6 +373,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L snes9x2005_plus_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -383,6 +398,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L snes9x2005_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -406,6 +423,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L snes9x2010_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -429,6 +448,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L bsnes_libretro.so \"{file.path}\""
         },
         "macos": {
@@ -452,6 +473,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L mesen-s_libretro.so \"{file.path}\""
         },
         "macos": {

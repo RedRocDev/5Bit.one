@@ -1,6 +1,7 @@
 {
   "system": {
     "id": "jag",
+    "multidisc": false,
     "name": "Atari Jaguar",
     "short_name": "Jaguar",
     "details": {
@@ -12,6 +13,10 @@
     "ids": {
       "screenscraper": 27,
       "retroachievements": 17
+    },
+    "ra_hash": {
+      "algo": "file",
+      "mode": "hash_only"
     },
     "folders": [
       "jag",
@@ -59,6 +64,7 @@
         },
         "linux": {
           "executable": "bigpemu",
+          "emudeck_launcher": "bigpemu.sh",
           "args": "\"{file.path}\""
         }
       }
@@ -103,6 +109,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L virtualjaguar_libretro.so \"{file.path}\""
         },
         "macos": {

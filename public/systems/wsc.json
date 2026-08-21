@@ -1,6 +1,7 @@
 {
   "system": {
     "id": "wsc",
+    "multidisc": false,
     "name": "WonderSwan Color",
     "short_name": "WSC",
     "details": {
@@ -13,12 +14,17 @@
       "screenscraper": 45,
       "retroachievements": 53
     },
+    "ra_hash": {
+      "algo": "file",
+      "mode": "hash_only"
+    },
     "folders": [
       "wsc",
       "WonderSwan Color",
       "Bandai WonderSwan Color",
       "WonderSwanColor",
-      "wswanc"
+      "wswanc",
+      "wonderswan-color"
     ],
     "colors": [
       "#EC407A",
@@ -84,6 +90,8 @@
         },
         "linux": {
           "executable": "retroarch",
+          "flatpak": "org.libretro.RetroArch",
+          "emudeck_launcher": "retroarch.sh",
           "args": "-L mednafen_wswan_libretro.so \"{file.path}\""
         },
         "macos": {
