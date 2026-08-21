@@ -720,7 +720,7 @@ const toc = [
                       {
                         sortedSystems.map((s) => {
                           const type = s.system.details?.type ?? "console";
-                          const t = systemTypeMeta[type] ?? systemTypeMeta.console;
+                          const t = systemTypeMeta[type] ?? { label: "Console", icon: "mdi:television-classic", color: "text-primary" };
                           return (
                             <tr data-system data-name={(s.system.name || "").toLowerCase()} data-type={type} class="border-t border-base-300/50 transition-colors hover:bg-base-100/60">
                               <td class="px-4 py-3">

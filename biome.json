@@ -60,11 +60,20 @@
 				}
 			}
 		},
-		{
-			"includes": ["src/styles/global.css"],
-			"linter": {
-				"enabled": false
-			}
+{
+		"includes": ["src/styles/global.css"],
+		"linter": {
+			"enabled": false
 		}
-	]
+	},
+	{
+		"includes": ["**/*.svg"],
+		"linter": {
+			"enabled": false
+		},
+		"formatter": {
+			"enabled": false
+		}
+	}
+]
 }
