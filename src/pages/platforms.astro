@@ -1,0 +1,5 @@
+---
+import Base from "@/layouts/Base.astro";
+const platforms = [["Desktop", "Windows, Linux, and macOS"], ["Mobile", "Android"], ["Living room", "Google TV, Android TV, and Amazon Fire TV"], ["Handheld", "Handheld PCs and specialist Linux gaming devices"]];
+---
+<Base meta={{ title: "Platforms", description: "The planned platform direction for 5bit across desktop, mobile, TV, and handheld devices." }}><section class="mx-auto max-w-7xl px-6 py-20"><span class="badge badge-warning">Planned support</span><h1 class="mt-5 text-5xl font-black tracking-tight">Designed to move with you.</h1><p class="mt-5 max-w-2xl text-lg text-base-content/65">The platform list is a roadmap, not a compatibility guarantee. Initial release targets will be confirmed as development progresses.</p><div class="mt-10 grid gap-4 sm:grid-cols-2">{platforms.map(([title, detail]) => <article class="card card-body"><h2 class="card-title">{title}</h2><p class="text-base-content/60">{detail}</p></article>)}</div></section></Base>

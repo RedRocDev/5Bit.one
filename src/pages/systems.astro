@@ -1,0 +1,5 @@
+---
+import Base from "@/layouts/Base.astro";
+const areas = ["RetroArch integration", "Standalone emulator support", "Steam and native application launching", "Metadata and artwork", "Firmware detection and verification", "Emulator and core setup assistance"];
+---
+<Base meta={{ title: "Systems", description: "Planned system and library capabilities for the 5bit universal gaming home." }}><section class="mx-auto max-w-7xl px-6 py-20"><span class="badge badge-warning">Planned capabilities</span><h1 class="mt-5 text-5xl font-black tracking-tight">Libraries, launchers, and systems together.</h1><p class="mt-5 max-w-2xl text-lg text-base-content/65">5bit aims to help people organise and launch their games without hiding the tools that make each platform work.</p><ul class="mt-10 grid gap-4 sm:grid-cols-2">{areas.map((area) => <li class="card p-5 font-semibold">{area}</li>)}</ul><p class="mt-8 text-sm text-base-content/55">Specific systems, emulators, cores, and stores will be documented only after compatibility is tested.</p></section></Base>

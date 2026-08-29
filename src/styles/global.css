@@ -2,10 +2,8 @@
 @plugin "@tailwindcss/typography";
 
 /*
- * NeoStation web design system, modeled on the neosync-web design language
- * (pure Tailwind, no daisyUI). The daisyUI class names used across the pages
- * are re-implemented here as Tailwind utilities so the markup keeps working
- * while the look matches the neosync-web aesthetic.
+ * 5bit baseline design system. The full visual identity is intentionally
+ * deferred; these utilities provide a coherent, accessible dark interface.
  */
 
 @theme {

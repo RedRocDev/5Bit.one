@@ -1,106 +1,19 @@
 ---
 import { Icon } from "astro-icon/components";
-import { menuLinks, siteConfig } from "@/site.config";
+import { menuLinks } from "@/site.config";
 ---
-
 <header class="sticky top-0 z-40 glass border-b border-base-300">
-  <nav class="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6">
-    <div class="flex items-center gap-1.5">
-      <div class="dropdown lg:hidden">
-        <button type="button" data-mobile-menu-toggle aria-expanded="false" aria-controls="mobile-menu" class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-base-300 bg-base-200 text-base-content/70 transition hover:bg-base-300 hover:text-base-content lg:hidden" aria-label="Toggle navigation menu">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-        </button>
-        <ul id="mobile-menu" class="dropdown-content menu menu-sm mt-3 w-52 bg-base-100/95 backdrop-blur-xl border border-base-300">
-          {menuLinks.map((link) => (
-            <li>
-              <a
-                href={link.path}
-                class="block rounded-lg px-3 py-2 text-sm font-medium transition-colors"
-                aria-current={Astro.url.pathname === link.path ? "page" : undefined}
-              >
-                {link.title}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
-      <a href="/" class="rounded-lg px-1.5 py-1.5">
-        <img src="/neostation-logo-dark-v2.webp" alt={siteConfig.title} class="h-8 w-auto" width="160" height="40" />
-      </a>
-    </div>
-
-    <div class="hidden items-center gap-1 lg:flex">
-      {menuLinks.map((link) => {
-        const active = Astro.url.pathname === link.path;
-        return (
-          <a
-            href={link.path}
-            class={`rounded-lg px-3 py-2 text-sm font-medium transition-colors ${
-              active ? "text-base-content" : "text-base-content/60 hover:text-base-content"
-            }`}
-            aria-current={active ? "page" : undefined}
-          >
-            {link.title}
-          </a>
-        );
-      })}
-    </div>
-
-    <div class="flex items-center gap-2">
-      <a
-        href="https://github.com/misobadev/neostation-frontend"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-base-300 bg-base-200 text-base-content/70 transition hover:border-base-300/70 hover:bg-base-300/60 hover:text-base-content"
-        aria-label="NeoStation source code on GitHub (GPL v3)"
-      >
-        <Icon name="simple-icons:github" class="h-4 w-4" />
-      </a>
-      <a
-        href="https://discord.gg/xE2kgKsRVq"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-base-300 bg-base-200 text-base-content/70 transition hover:border-base-300/70 hover:bg-base-300/60 hover:text-base-content"
-        aria-label="Join our Discord community"
-      >
-        <Icon name="simple-icons:discord" class="h-4 w-4" />
-      </a>
-      <a href="/downloads/" class="btn btn-primary h-9 px-4">
-        Get NeoStation
-      </a>
-    </div>
+  <nav aria-label="Primary" class="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6">
+    <div class="flex items-center gap-2"><div class="dropdown lg:hidden"><button type="button" data-mobile-menu-toggle aria-expanded="false" aria-controls="mobile-menu" class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-base-300 bg-base-200" aria-label="Toggle navigation menu"><Icon name="heroicons:bars-3" class="h-5 w-5" /></button><ul id="mobile-menu" class="dropdown-content menu menu-sm mt-3 w-52 border border-base-300 bg-base-100/95 backdrop-blur-xl">{menuLinks.map((link) => <li><a href={link.path} aria-current={Astro.url.pathname === link.path ? "page" : undefined}>{link.title}</a></li>)}</ul></div><a href="/" class="text-xl font-black tracking-tight" aria-label="5bit home">5bit</a></div>
+    <div class="hidden items-center gap-1 lg:flex">{menuLinks.map((link) => <a href={link.path} class={`rounded-lg px-3 py-2 text-sm font-medium transition-colors ${Astro.url.pathname === link.path ? "text-base-content" : "text-base-content/60 hover:text-base-content"}`} aria-current={Astro.url.pathname === link.path ? "page" : undefined}>{link.title}</a>)}</div>
+    <div class="flex items-center gap-2"><a href="https://github.com/RedRocDev/5Bit.one" target="_blank" rel="noopener noreferrer" class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-base-300 bg-base-200" aria-label="5bit website source on GitHub"><Icon name="simple-icons:github" class="h-4 w-4" /></a><a href="/download/" class="btn btn-primary h-9 px-4">Coming soon</a></div>
   </nav>
 </header>
-
 <script>
   const dropdown = document.querySelector<HTMLElement>(".dropdown");
   const toggle = document.querySelector<HTMLButtonElement>("[data-mobile-menu-toggle]");
-
-  function openMenu(open: boolean) {
-    if (!dropdown) return;
-    dropdown.classList.toggle("open", open);
-    toggle?.setAttribute("aria-expanded", String(open));
-  }
-
-  toggle?.addEventListener("click", (event) => {
-    event.stopPropagation();
-    openMenu(!dropdown?.classList.contains("open"));
-  });
-
-  document.addEventListener("click", (event) => {
-    if (dropdown && !dropdown.contains(event.target as Node)) {
-      openMenu(false);
-    }
-  });
-
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
-      openMenu(false);
-      toggle?.focus();
-    }
-  });
-
-  dropdown?.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => openMenu(false));
-  });
+  const openMenu = (open: boolean) => { dropdown?.classList.toggle("open", open); toggle?.setAttribute("aria-expanded", String(open)); };
+  toggle?.addEventListener("click", (event) => { event.stopPropagation(); openMenu(!dropdown?.classList.contains("open")); });
+  document.addEventListener("click", (event) => { if (dropdown && !dropdown.contains(event.target as Node)) openMenu(false); });
+  document.addEventListener("keydown", (event) => { if (event.key === "Escape") { openMenu(false); toggle?.focus(); } });
 </script>
