@@ -24,7 +24,7 @@
 		"@astrojs/rss": "^4.0.18",
 		"@astrojs/sitemap": "^3.7.3",
 		"@fontsource-variable/jetbrains-mono": "^5.2.8",
-		"@fontsource-variable/sora": "^5.2.8",
+		"@fontsource-variable/sora": "^5.3.0",
 		"@fontsource/anta": "^5.2.7",
 		"@iconify-json/heroicons": "^1.2.3",
 		"@iconify-json/mdi": "^1.2.3",
