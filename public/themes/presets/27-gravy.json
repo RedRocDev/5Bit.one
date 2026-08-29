@@ -1,0 +1,36 @@
+{
+  "name": "Gravy",
+  "id": "5bit_gravy",
+  "author": "5bit",
+  "colorScheme": "dark",
+  "colors": {
+    "base-100": "#050506",
+    "base-200": "#0D0D10",
+    "base-300": "#17171B",
+    "base-content": "#F5F5F5",
+    "primary": "#E7272D",
+    "primary-content": "#FFFFFF",
+    "secondary": "#9A9AA4",
+    "secondary-content": "#FFFFFF",
+    "accent": "#3B82F6",
+    "accent-content": "#FFFFFF",
+    "neutral": "#08090C",
+    "neutral-content": "#ECEEF4",
+    "info": "#38BDF8",
+    "info-content": "#051C29",
+    "success": "#34D399",
+    "success-content": "#06291F",
+    "warning": "#FBBF24",
+    "warning-content": "#2D1B00",
+    "error": "#FB7185",
+    "error-content": "#35050D"
+  },
+  "effects": {
+    "radius-selector": "0.375rem",
+    "radius-field": "0.25rem",
+    "radius-box": "0.5rem",
+    "border": "2px",
+    "size-selector": "0.25rem",
+    "size-field": "0.25rem"
+  }
+}

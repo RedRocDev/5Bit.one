@@ -1,4 +1,4 @@
-﻿---
+---
 import PageLayout from "@/layouts/Base.astro";
 import { Icon } from "astro-icon/components";
 import fs from "node:fs";
@@ -6,8 +6,8 @@ import path from "node:path";
 
 const meta = {
   description:
-    "Comprehensive guide to setting up and using NeoStation across all platforms.",
-  title: "User Guide - NeoStation",
+    "Comprehensive guide to setting up and using 5bit across all platforms.",
+  title: "User Guide",
 };
 
 // Automate Folder Compatibility Table
@@ -38,9 +38,6 @@ const totalSystems = sortedSystems.length;
 const emulationCompatibleCount = sortedSystems.filter(
   (s) => s.emulators && s.emulators.length > 0,
 ).length;
-const neosyncCompatibleCount = sortedSystems.filter(
-  (s) => s.neosync.sync,
-).length;
 
 const systemTypeMeta: Record<string, { label: string; icon: string; color: string }> = {
   console: { label: "Console", icon: "mdi:television-classic", color: "text-primary" },
@@ -60,7 +57,7 @@ const toc = [
     label: "Setup & Config",
     icon: "heroicons:cog-6-tooth",
   },
-  { id: "neosync", label: "Integrations", icon: "heroicons:bolt" },
+  { id: "integrations", label: "Integrations", icon: "heroicons:bolt" },
   {
     id: "folder-compatibility",
     label: "Folder Structure",
@@ -86,8 +83,8 @@ const toc = [
         </h1>
         <div class="max-w-3xl mx-auto">
           <p class="text-lg md:text-xl text-base-content/60 leading-relaxed mb-10">
-            Master your experience with NeoStation. From basic setup to
-            fine-tuning cloud saves, this complete manual has you covered.
+            Use this guide for the current 5bit setup model, folder conventions,
+            platform notes, and the parts of the ecosystem being designed around it.
           </p>
 
           <div class="flex flex-wrap justify-center gap-3">
@@ -107,14 +104,10 @@ const toc = [
             <div
               class="inline-flex items-center gap-3 px-5 py-3 bg-info/10 rounded-2xl border border-info/20"
             >
-              <Icon name="heroicons:cloud-arrow-up" class="w-6 h-6 text-info" />
+              <Icon name="heroicons:swatch" class="w-6 h-6 text-info" />
               <div class="text-left">
-                <div class="text-xl font-black text-base-content leading-none">
-                  {neosyncCompatibleCount}
-                </div>
-                <div class="text-[10px] text-base-content/50 uppercase tracking-widest font-bold mt-1">
-                  NeoSync Ready
-                </div>
+                <div class="text-xl font-black text-base-content leading-none">40</div>
+                <div class="text-[10px] text-base-content/50 uppercase tracking-widest font-bold mt-1">Theme Presets</div>
               </div>
             </div>
             <div
@@ -153,8 +146,8 @@ const toc = [
 
           <div class="card card-border bg-primary/10 mt-6">
             <div class="card-body items-center text-center">
-              <p class="text-xs text-base-content/60 italic mb-4">Need more help? Join our community.</p>
-              <a href="https://discord.gg/xE2kgKsRVq" target="_blank" class="btn btn-secondary btn-sm btn-block">Discord Server</a>
+              <p class="text-xs text-base-content/60 italic mb-4">Found a problem or unclear step?</p>
+              <a href="https://github.com/RedRocDev/5Bit.one/issues" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm btn-block">Report an issue</a>
             </div>
           </div>
         </aside>
@@ -266,7 +259,7 @@ const toc = [
                     <p class="text-xs text-base-content/70">
                       Unzip the ZIP file into a folder and run <code
                         class="text-primary bg-primary/10 px-1.5 py-0.5 rounded font-mono"
-                        >neostation.exe</code
+                        >5bit.exe</code
                       >.
                     </p>
                   </div>
@@ -315,7 +308,7 @@ const toc = [
                   <div
                     class="bg-base-100 p-3 rounded-xl border border-base-content/10 font-mono text-xs text-warning"
                   >
-                    chmod +x NeoStation-Linux.AppImage
+                    chmod +x 5bit-Linux.AppImage
                   </div>
                   <p class="text-xs text-base-content/50 mt-4 leading-relaxed">
                     Make the file executable and run it via terminal or file
@@ -375,14 +368,22 @@ const toc = [
                         Your ROMs folder must contain subfolders organized by
                         system (e.g., <code class="text-warning">nes</code>, <code
                           class="text-warning">snes</code
-                        >). NeoStation will auto-detect these based on the
+                        >). 5bit will auto-detect these based on the
                         standard naming convention.
                       </p>
-                      <a
-                        href="#folder-compatibility"
-                        class="text-xs font-bold text-warning uppercase tracking-widest"
-                        >View all folder names →</a
-                      >
+                      <div class="flex flex-col items-start gap-2">
+                        <a
+                          href="#folder-compatibility"
+                          class="text-xs font-bold text-warning uppercase tracking-widest"
+                          >View all folder names →</a
+                        >
+                        <a
+                          href="/downloads/5bit-rom-folder-structure.zip"
+                          download
+                          class="text-xs font-bold text-primary uppercase tracking-widest transition hover:text-primary-soft"
+                          >Download preset folder structure ↓</a
+                        >
+                      </div>
                     </div>
                     <div class="shrink-0 max-w-sm">
                       <img
@@ -390,44 +391,6 @@ const toc = [
                         alt="Structure Example"
                         class="rounded-2xl border border-base-content/20"
                       />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- RetroArch Warning -->
-              <div class="card card-border bg-base-200 relative overflow-hidden">
-                <div class="card-body">
-                  <div class="flex flex-col xl:flex-row gap-8 items-center">
-                    <div class="flex-grow">
-                      <h3
-                        class="text-xl font-bold text-base-content mb-4 flex items-center gap-3"
-                      >
-                        <Icon
-                          name="heroicons:exclamation-circle"
-                          class="text-info w-6 h-6"
-                        />
-                        RetroArch (Android) Version
-                      </h3>
-                      <p class="text-base-content/60 text-sm leading-relaxed mb-6">
-                        For NeoSync to work on Android, **do not use the Play
-                        Store version**. It has file restrictions that block cloud
-                        saves.
-                        <strong
-                          >Use the version direct from <a
-                            href="https://retroarch.com/?page=platforms"
-                            target="_blank"
-                            class="text-info hover:underline">retroarch.com</a
-                          ></strong
-                        >.
-                      </p>
-                      <div class="alert alert-info">
-                        <p class="text-xs italic leading-relaxed">
-                          Backup your saves before switching! Place them in: <code
-                            class="text-info font-mono"
-                            >/RetroArch/saves</code
-                          >
-                        </p>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -454,13 +417,6 @@ const toc = [
                         >) in the application's General Settings.
                       </p>
                     </div>
-                    <div class="shrink-0 max-w-sm">
-                      <img
-                        src="/guide/guide-03.webp"
-                        alt="Desktop Setup"
-                        class="rounded-2xl border border-base-content/20"
-                      />
-                    </div>
                   </div>
                 </div>
               </div>
@@ -468,7 +424,7 @@ const toc = [
           </section>
 
           <!-- Integrations -->
-          <section id="neosync" class="scroll-mt-24">
+          <section id="integrations" class="scroll-mt-24">
             <div class="flex items-center gap-4 mb-8">
               <h2
                 class="text-3xl font-bold text-base-content pl-6 border-l-4 border-primary"
@@ -478,46 +434,12 @@ const toc = [
             </div>
 
             <p class="text-base-content/60 text-sm leading-relaxed mb-8">
-              NeoStation plugs directly into the services powering the modern
-              emulation scene. Every integration works out of the box.
+              These are ecosystem tools 5bit is being designed to work alongside.
+              Exact integration behaviour will be documented as features are implemented and tested.
             </p>
 
             <!-- Integration Cards -->
             <div class="grid md:grid-cols-2 gap-6">
-
-              <!-- NeoSync -->
-              <div class="card card-border bg-base-200">
-                <div class="card-body">
-                  <div class="flex items-center gap-4 mb-5">
-                    <div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center shrink-0 p-2.5">
-                      <img src="/providers/neosync.svg" alt="NeoSync" class="w-full h-full object-contain" />
-                    </div>
-                    <div>
-                      <h3 class="card-title">NeoSync</h3>
-                      <span class="badge badge-primary badge-sm">Cloud Saves</span>
-                    </div>
-                  </div>
-                  <p class="text-base-content/60 text-sm leading-relaxed mb-5">
-                    NeoStation's cloud save engine. Saves and states sync
-                    atomically across Windows, Android, macOS, and Linux, no
-                    manual intervention needed.
-                  </p>
-                  <div class="flex flex-wrap gap-2 mb-5">
-                    {["RetroArch", "RetroArch32", "RetroArch64", "Eden", "Citro", "NetherSX2"].map((emu) => (
-                      <span class="badge badge-primary badge-outline badge-sm">{emu}</span>
-                    ))}
-                  </div>
-                  <div class="alert alert-info p-3">
-                    <Icon name="heroicons:information-circle" class="w-4 h-4 shrink-0" />
-                    <span class="text-xs text-base-content/60">
-                      <strong class="text-base-content">Free Plan (4 MB)</strong> is enough for thousands of save files. Optional, NeoStation works fully offline.
-                    </span>
-                  </div>
-                  <a href="https://neosync.cloud" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-block mt-5">
-                    neosync.cloud <Icon name="heroicons:arrow-top-right-on-square" class="w-4 h-4" />
-                  </a>
-                </div>
-              </div>
 
               <!-- RomM -->
               <div class="card card-border bg-base-200">
@@ -566,18 +488,17 @@ const toc = [
                     </div>
                   </div>
                   <p class="text-base-content/60 text-sm leading-relaxed mb-5">
-                    The community achievement system for classic games. Login with
-                    your account and unlock trophies right inside NeoStation.
+                    The community achievement system for classic games and a target for future 5bit integration.
                   </p>
                   <div class="flex flex-wrap gap-2 mb-5">
-                    {["Login in-app", "Progress tracking", "Leaderboards"].map((f) => (
+                    {["Achievements", "Progress", "Leaderboards"].map((f) => (
                       <span class="badge badge-warning badge-outline badge-sm">{f}</span>
                     ))}
                   </div>
                   <div class="alert alert-info p-3">
                     <Icon name="heroicons:information-circle" class="w-4 h-4 shrink-0" />
                     <span class="text-xs text-base-content/60">
-                      Systems without RA support are hidden automatically.
+                      Support details will be documented when the integration is implemented.
                     </span>
                   </div>
                   <a href="https://retroachievements.org" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-block mt-5">
@@ -599,9 +520,7 @@ const toc = [
                     </div>
                   </div>
                   <p class="text-base-content/60 text-sm leading-relaxed mb-5">
-                    The largest community game database in emulation. Box art,
-                    screenshots, descriptions, and release dates scraped
-                    automatically for your whole library.
+                    A community game database and potential metadata source for artwork, descriptions, and release information.
                   </p>
                   <div class="flex flex-wrap gap-2 mb-5">
                     {["Batch scraping", "Box art", "Real game names"].map((f) => (
@@ -611,7 +530,7 @@ const toc = [
                   <div class="alert alert-info p-3">
                     <Icon name="heroicons:information-circle" class="w-4 h-4 shrink-0" />
                     <span class="text-xs text-base-content/60">
-                      Raw ROM filenames become real game names in the UI.
+                      Metadata behaviour will be documented when the integration is implemented.
                     </span>
                   </div>
                   <a href="https://www.screenscraper.fr" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-block mt-5">
@@ -633,9 +552,7 @@ const toc = [
                     </div>
                   </div>
                   <p class="text-base-content/60 text-sm leading-relaxed mb-5">
-                    The multi-system emulator frontend at the heart of the retro
-                    scene. NeoStation pairs with RetroArch for emulation and
-                    deeply integrates its save and state system.
+                    The multi-system emulator frontend is a major compatibility target for 5bit.
                   </p>
                   <div class="flex flex-wrap gap-2 mb-5">
                     {["LibRetro cores", "Save states", "SRAM saves", "Cross-platform"].map((f) => (
@@ -645,7 +562,7 @@ const toc = [
                   <div class="alert alert-info p-3">
                     <Icon name="heroicons:information-circle" class="w-4 h-4 shrink-0" />
                     <span class="text-xs text-base-content/60">
-                      Cloud saves, achievements, and scraping all built on RetroArch data.
+                      Core, save, and launch behaviour will be documented when integration testing is complete.
                     </span>
                   </div>
                   <a href="https://www.retroarch.com" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-block mt-5">
@@ -670,7 +587,7 @@ const toc = [
             <div class="card card-border bg-base-200 overflow-hidden">
               <div class="p-6 border-b border-base-content/10 flex flex-col md:flex-row md:items-center gap-4">
                 <p class="text-xs text-base-content/60 italic flex-grow">
-                  Automatically generated from system metadata. NeoStation
+                  Automatically generated from system metadata. 5bit
                   auto-detects folders by these standard names.
                 </p>
                 <div class="flex items-center gap-2 text-xs text-base-content/50 font-bold shrink-0">

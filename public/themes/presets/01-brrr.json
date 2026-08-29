@@ -1,0 +1,36 @@
+{
+  "name": "Brrr",
+  "id": "5bit_brrr",
+  "author": "5bit",
+  "colorScheme": "light",
+  "colors": {
+    "base-100": "#F6FCFF",
+    "base-200": "#E7F7FF",
+    "base-300": "#D4EFFF",
+    "base-content": "#09263A",
+    "primary": "#28B7FF",
+    "primary-content": "#FFFFFF",
+    "secondary": "#78C8FF",
+    "secondary-content": "#111318",
+    "accent": "#7BE8FF",
+    "accent-content": "#111318",
+    "neutral": "#24262D",
+    "neutral-content": "#F8F8FA",
+    "info": "#168BD2",
+    "info-content": "#FFFFFF",
+    "success": "#149C62",
+    "success-content": "#FFFFFF",
+    "warning": "#D78C00",
+    "warning-content": "#241700",
+    "error": "#DC3157",
+    "error-content": "#FFFFFF"
+  },
+  "effects": {
+    "radius-selector": "0.875rem",
+    "radius-field": "0.625rem",
+    "radius-box": "1.25rem",
+    "border": "1px",
+    "size-selector": "0.25rem",
+    "size-field": "0.25rem"
+  }
+}

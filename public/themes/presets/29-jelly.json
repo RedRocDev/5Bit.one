@@ -1,0 +1,36 @@
+{
+  "name": "Jelly",
+  "id": "5bit_jelly",
+  "author": "5bit",
+  "colorScheme": "dark",
+  "colors": {
+    "base-100": "#090414",
+    "base-200": "#120622",
+    "base-300": "#1A0933",
+    "base-content": "#F9F2FF",
+    "primary": "#B517FF",
+    "primary-content": "#FFFFFF",
+    "secondary": "#5E2BFF",
+    "secondary-content": "#FFFFFF",
+    "accent": "#00E5FF",
+    "accent-content": "#111318",
+    "neutral": "#08090C",
+    "neutral-content": "#ECEEF4",
+    "info": "#38BDF8",
+    "info-content": "#051C29",
+    "success": "#34D399",
+    "success-content": "#06291F",
+    "warning": "#FBBF24",
+    "warning-content": "#2D1B00",
+    "error": "#FB7185",
+    "error-content": "#35050D"
+  },
+  "effects": {
+    "radius-selector": "0.625rem",
+    "radius-field": "0.375rem",
+    "radius-box": "0.875rem",
+    "border": "2px",
+    "size-selector": "0.25rem",
+    "size-field": "0.25rem"
+  }
+}

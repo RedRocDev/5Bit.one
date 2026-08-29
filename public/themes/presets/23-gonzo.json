@@ -1,0 +1,36 @@
+{
+  "name": "Gonzo",
+  "id": "5bit_gonzo",
+  "author": "5bit",
+  "colorScheme": "dark",
+  "colors": {
+    "base-100": "#07050B",
+    "base-200": "#0D0712",
+    "base-300": "#160A1A",
+    "base-content": "#F8F4FF",
+    "primary": "#FF2BD6",
+    "primary-content": "#FFFFFF",
+    "secondary": "#00E5FF",
+    "secondary-content": "#111318",
+    "accent": "#8AFF00",
+    "accent-content": "#111318",
+    "neutral": "#08090C",
+    "neutral-content": "#ECEEF4",
+    "info": "#38BDF8",
+    "info-content": "#051C29",
+    "success": "#34D399",
+    "success-content": "#06291F",
+    "warning": "#FBBF24",
+    "warning-content": "#2D1B00",
+    "error": "#FB7185",
+    "error-content": "#35050D"
+  },
+  "effects": {
+    "radius-selector": "0.625rem",
+    "radius-field": "0.375rem",
+    "radius-box": "0.875rem",
+    "border": "2px",
+    "size-selector": "0.25rem",
+    "size-field": "0.25rem"
+  }
+}

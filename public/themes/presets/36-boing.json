@@ -1,0 +1,36 @@
+{
+  "name": "Boing",
+  "id": "5bit_boing",
+  "author": "5bit",
+  "colorScheme": "dark",
+  "colors": {
+    "base-100": "#050509",
+    "base-200": "#0B0B12",
+    "base-300": "#12121D",
+    "base-content": "#FAFAFF",
+    "primary": "#FF245F",
+    "primary-content": "#FFFFFF",
+    "secondary": "#00D8FF",
+    "secondary-content": "#111318",
+    "accent": "#FFD400",
+    "accent-content": "#111318",
+    "neutral": "#08090C",
+    "neutral-content": "#ECEEF4",
+    "info": "#38BDF8",
+    "info-content": "#051C29",
+    "success": "#34D399",
+    "success-content": "#06291F",
+    "warning": "#FBBF24",
+    "warning-content": "#2D1B00",
+    "error": "#FB7185",
+    "error-content": "#35050D"
+  },
+  "effects": {
+    "radius-selector": "0rem",
+    "radius-field": "0rem",
+    "radius-box": "0rem",
+    "border": "2px",
+    "size-selector": "0.25rem",
+    "size-field": "0.25rem"
+  }
+}

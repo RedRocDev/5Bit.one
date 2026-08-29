@@ -1,0 +1,36 @@
+{
+  "name": "Zesty",
+  "id": "5bit_zesty",
+  "author": "5bit",
+  "colorScheme": "light",
+  "colors": {
+    "base-100": "#FFFFE7",
+    "base-200": "#FFFBBE",
+    "base-300": "#FFF485",
+    "base-content": "#303208",
+    "primary": "#E4D500",
+    "primary-content": "#111318",
+    "secondary": "#A3E635",
+    "secondary-content": "#111318",
+    "accent": "#F59E0B",
+    "accent-content": "#FFFFFF",
+    "neutral": "#24262D",
+    "neutral-content": "#F8F8FA",
+    "info": "#168BD2",
+    "info-content": "#FFFFFF",
+    "success": "#149C62",
+    "success-content": "#FFFFFF",
+    "warning": "#D78C00",
+    "warning-content": "#241700",
+    "error": "#DC3157",
+    "error-content": "#FFFFFF"
+  },
+  "effects": {
+    "radius-selector": "0.75rem",
+    "radius-field": "0.5rem",
+    "radius-box": "0.75rem",
+    "border": "2px",
+    "size-selector": "0.3125rem",
+    "size-field": "0.3125rem"
+  }
+}

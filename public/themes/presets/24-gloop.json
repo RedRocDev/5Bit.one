@@ -1,0 +1,36 @@
+{
+  "name": "Gloop",
+  "id": "5bit_gloop",
+  "author": "5bit",
+  "colorScheme": "dark",
+  "colors": {
+    "base-100": "#020704",
+    "base-200": "#041008",
+    "base-300": "#06190C",
+    "base-content": "#D9FFE3",
+    "primary": "#00FF66",
+    "primary-content": "#111318",
+    "secondary": "#39FF14",
+    "secondary-content": "#111318",
+    "accent": "#B7FF00",
+    "accent-content": "#111318",
+    "neutral": "#08090C",
+    "neutral-content": "#ECEEF4",
+    "info": "#38BDF8",
+    "info-content": "#051C29",
+    "success": "#34D399",
+    "success-content": "#06291F",
+    "warning": "#FBBF24",
+    "warning-content": "#2D1B00",
+    "error": "#FB7185",
+    "error-content": "#35050D"
+  },
+  "effects": {
+    "radius-selector": "0.125rem",
+    "radius-field": "0.125rem",
+    "radius-box": "0.25rem",
+    "border": "1px",
+    "size-selector": "0.25rem",
+    "size-field": "0.25rem"
+  }
+}

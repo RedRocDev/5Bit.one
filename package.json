@@ -1,5 +1,5 @@
 {
-	"name": "neostation-web",
+	"name": "5bit-one",
 	"type": "module",
 	"version": "0.9.2",
 	"private": false,
@@ -7,7 +7,6 @@
 		"dev": "astro dev --host",
 		"start": "astro dev",
 		"build": "astro build",
-		"sync:systems": "node scripts/sync-systems.mjs",
 		"build:theme": "node scripts/theme/build.mjs",
 		"postbuild": "pagefind --site dist",
 		"preview": "astro preview",

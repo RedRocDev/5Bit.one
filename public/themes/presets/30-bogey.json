@@ -1,0 +1,36 @@
+{
+  "name": "Bogey",
+  "id": "5bit_bogey",
+  "author": "5bit",
+  "colorScheme": "dark",
+  "colors": {
+    "base-100": "#070A03",
+    "base-200": "#101507",
+    "base-300": "#18210A",
+    "base-content": "#F4FFE0",
+    "primary": "#C8FF00",
+    "primary-content": "#111318",
+    "secondary": "#7CFF00",
+    "secondary-content": "#111318",
+    "accent": "#FFD400",
+    "accent-content": "#111318",
+    "neutral": "#08090C",
+    "neutral-content": "#ECEEF4",
+    "info": "#38BDF8",
+    "info-content": "#051C29",
+    "success": "#34D399",
+    "success-content": "#06291F",
+    "warning": "#FBBF24",
+    "warning-content": "#2D1B00",
+    "error": "#FB7185",
+    "error-content": "#35050D"
+  },
+  "effects": {
+    "radius-selector": "0.75rem",
+    "radius-field": "0.5rem",
+    "radius-box": "0.75rem",
+    "border": "2px",
+    "size-selector": "0.3125rem",
+    "size-field": "0.3125rem"
+  }
+}

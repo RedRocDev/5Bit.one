@@ -1,0 +1,36 @@
+{
+  "name": "Snot",
+  "id": "5bit_snot",
+  "author": "5bit",
+  "colorScheme": "dark",
+  "colors": {
+    "base-100": "#080A05",
+    "base-200": "#111408",
+    "base-300": "#1B210C",
+    "base-content": "#F7FFE7",
+    "primary": "#D4FF00",
+    "primary-content": "#111318",
+    "secondary": "#FFD000",
+    "secondary-content": "#111318",
+    "accent": "#54FF54",
+    "accent-content": "#111318",
+    "neutral": "#08090C",
+    "neutral-content": "#ECEEF4",
+    "info": "#38BDF8",
+    "info-content": "#051C29",
+    "success": "#34D399",
+    "success-content": "#06291F",
+    "warning": "#FBBF24",
+    "warning-content": "#2D1B00",
+    "error": "#FB7185",
+    "error-content": "#35050D"
+  },
+  "effects": {
+    "radius-selector": "0.125rem",
+    "radius-field": "0.125rem",
+    "radius-box": "0.25rem",
+    "border": "1px",
+    "size-selector": "0.25rem",
+    "size-field": "0.25rem"
+  }
+}

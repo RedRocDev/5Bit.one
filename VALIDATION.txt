@@ -1,0 +1,7 @@
+5bit validation summary
+
+- Public/source old-brand scan: PASS (0 matches)
+- Theme presets: 40 total (20 light / 20 dark)
+- Theme Designer generator: executed successfully after cleanup
+- Full Astro build: not executed in the assistant container because npm dependencies were not available offline and the package install timed out
+- Recommended local verification: npm.cmd install (if needed), npm.cmd run check, npm.cmd run build

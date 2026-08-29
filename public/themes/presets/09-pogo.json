@@ -1,0 +1,36 @@
+{
+  "name": "Pogo",
+  "id": "5bit_pogo",
+  "author": "5bit",
+  "colorScheme": "light",
+  "colors": {
+    "base-100": "#F0F0F2",
+    "base-200": "#DFE0E4",
+    "base-300": "#CDD0D5",
+    "base-content": "#25262B",
+    "primary": "#E44B4B",
+    "primary-content": "#FFFFFF",
+    "secondary": "#3E70E8",
+    "secondary-content": "#FFFFFF",
+    "accent": "#35A75A",
+    "accent-content": "#FFFFFF",
+    "neutral": "#24262D",
+    "neutral-content": "#F8F8FA",
+    "info": "#168BD2",
+    "info-content": "#FFFFFF",
+    "success": "#149C62",
+    "success-content": "#FFFFFF",
+    "warning": "#D78C00",
+    "warning-content": "#241700",
+    "error": "#DC3157",
+    "error-content": "#FFFFFF"
+  },
+  "effects": {
+    "radius-selector": "0.375rem",
+    "radius-field": "0.25rem",
+    "radius-box": "0.5rem",
+    "border": "2px",
+    "size-selector": "0.25rem",
+    "size-field": "0.25rem"
+  }
+}

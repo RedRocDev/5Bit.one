@@ -17,6 +17,18 @@ const {
 
 <html class="scroll-smooth" lang={siteConfig.lang} data-theme="dark">
   <head>
+    <script is:inline>
+      (() => {
+        try {
+          const saved = localStorage.getItem("5bit-color-mode");
+          const theme = saved === "light" || saved === "dark" ? saved : "dark";
+          document.documentElement.dataset.theme = theme;
+          document.documentElement.style.colorScheme = theme;
+        } catch {
+          document.documentElement.dataset.theme = "dark";
+        }
+      })();
+    </script>
     <BaseHead
       articleDate={articleDate}
       description={description}
@@ -31,8 +43,10 @@ const {
       aria-hidden="true"
       class="pointer-events-none fixed inset-0 z-0"
     >
-      <div class="absolute inset-0 bg-grid opacity-60 [mask-image:radial-gradient(ellipse_70%_50%_at_50%_0%,#000,transparent)]" />
-      <div class="absolute inset-0 bg-[radial-gradient(ellipse_70%_45%_at_50%_-10%,color-mix(in_oklab,var(--color-primary)_16%,transparent),transparent)]" />
+      <div class="absolute inset-0 bg-dotfield opacity-45 [mask-image:linear-gradient(to_bottom,#000,transparent_80%)]" />
+      <div class="absolute -left-40 -top-32 h-[34rem] w-[34rem] rounded-full bg-primary/12 blur-[110px]" />
+      <div class="absolute -right-44 top-24 h-[32rem] w-[32rem] rounded-full bg-secondary/10 blur-[120px]" />
+      <div class="absolute left-[38%] top-[36rem] h-[20rem] w-[20rem] rounded-full bg-accent/5 blur-[100px]" />
     </div>
     <div class="relative z-10 flex min-h-screen flex-col">
       <SkipLink />

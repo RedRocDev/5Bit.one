@@ -1,45 +1,31 @@
 ---
 import { Icon } from "astro-icon/components";
-import { menuLinks, siteConfig } from "@/site.config";
+import { menuLinks } from "@/site.config";
 ---
 
-<header class="sticky top-0 z-40 glass border-b border-base-300">
-  <nav class="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6">
-    <div class="flex items-center gap-1.5">
+<header class="sticky top-0 z-40 px-3 pt-3 sm:px-5">
+  <nav class="site-nav mx-auto flex h-16 max-w-6xl items-center justify-between gap-3 rounded-2xl border border-base-content/10 bg-base-100/85 px-3 shadow-[0_18px_50px_-30px_rgba(0,0,0,.9)] backdrop-blur-xl sm:px-4">
+    <div class="flex items-center gap-2">
       <div class="dropdown lg:hidden">
-        <button type="button" data-mobile-menu-toggle aria-expanded="false" aria-controls="mobile-menu" class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-base-300 bg-base-200 text-base-content/70 transition hover:bg-base-300 hover:text-base-content lg:hidden" aria-label="Toggle navigation menu">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+        <button type="button" data-mobile-menu-toggle aria-expanded="false" aria-controls="mobile-menu" class="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-base-300 bg-base-200 text-base-content/70 transition hover:border-primary/40 hover:text-base-content" aria-label="Toggle navigation menu">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h10M4 18h16" /></svg>
         </button>
-        <ul id="mobile-menu" class="dropdown-content menu menu-sm mt-3 w-52 bg-base-100/95 backdrop-blur-xl border border-base-300">
+        <ul id="mobile-menu" class="dropdown-content menu menu-sm mt-3 w-56 rounded-2xl border border-base-300 bg-base-100/95 p-2 shadow-2xl backdrop-blur-xl">
           {menuLinks.map((link) => (
-            <li>
-              <a
-                href={link.path}
-                class="block rounded-lg px-3 py-2 text-sm font-medium transition-colors"
-                aria-current={Astro.url.pathname === link.path ? "page" : undefined}
-              >
-                {link.title}
-              </a>
-            </li>
+            <li><a href={link.path} class="rounded-xl px-3 py-2.5 text-sm font-semibold" aria-current={Astro.url.pathname === link.path ? "page" : undefined}>{link.title}</a></li>
           ))}
         </ul>
       </div>
-      <a href="/" class="rounded-lg px-1.5 py-1.5">
-        <img src="/neostation-logo-dark-v2.webp" alt={siteConfig.title} class="h-8 w-auto" width="160" height="40" />
+      <a href="/" class="inline-flex items-center rounded-xl px-2 py-1">
+        <img src="/5bit-logo.png" alt="5bit" class="h-9 w-auto sm:h-10" width="1758" height="663" />
       </a>
     </div>
 
-    <div class="hidden items-center gap-1 lg:flex">
+    <div class="hidden items-center gap-1 rounded-xl border border-base-content/5 bg-base-200/55 p-1 lg:flex">
       {menuLinks.map((link) => {
         const active = Astro.url.pathname === link.path;
         return (
-          <a
-            href={link.path}
-            class={`rounded-lg px-3 py-2 text-sm font-medium transition-colors ${
-              active ? "text-base-content" : "text-base-content/60 hover:text-base-content"
-            }`}
-            aria-current={active ? "page" : undefined}
-          >
+          <a href={link.path} class={`rounded-lg px-3.5 py-2 text-sm font-semibold transition ${active ? "nav-link-active" : "text-base-content/55 hover:bg-base-content/5 hover:text-base-content"}`} aria-current={active ? "page" : undefined}>
             {link.title}
           </a>
         );
@@ -47,27 +33,26 @@ import { menuLinks, siteConfig } from "@/site.config";
     </div>
 
     <div class="flex items-center gap-2">
-      <a
-        href="https://github.com/misobadev/neostation-frontend"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-base-300 bg-base-200 text-base-content/70 transition hover:border-base-300/70 hover:bg-base-300/60 hover:text-base-content"
-        aria-label="NeoStation source code on GitHub (GPL v3)"
-      >
+      <a href="https://github.com/RedRocDev/5Bit.one" target="_blank" rel="noopener noreferrer" class="hidden h-10 w-10 items-center justify-center rounded-xl border border-base-300 bg-base-200 text-base-content/65 transition hover:border-primary/40 hover:text-primary sm:inline-flex" aria-label="5bit on GitHub">
         <Icon name="simple-icons:github" class="h-4 w-4" />
       </a>
-      <a
-        href="https://discord.gg/xE2kgKsRVq"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-base-300 bg-base-200 text-base-content/70 transition hover:border-base-300/70 hover:bg-base-300/60 hover:text-base-content"
-        aria-label="Join our Discord community"
+      <button
+        type="button"
+        data-theme-toggle
+        class="theme-toggle inline-flex h-10 w-10 items-center justify-center rounded-xl border border-base-300 bg-base-200 text-base-content/65 transition hover:border-primary/40 hover:text-primary"
+        aria-label="Switch to light mode"
+        aria-pressed="false"
+        title="Switch to light mode"
       >
-        <Icon name="simple-icons:discord" class="h-4 w-4" />
-      </a>
-      <a href="/downloads/" class="btn btn-primary h-9 px-4">
-        Get NeoStation
-      </a>
+        <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="3.5"></circle>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42"></path>
+        </svg>
+        <svg class="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M20.2 15.2A8.6 8.6 0 0 1 8.8 3.8 8.6 8.6 0 1 0 20.2 15.2Z"></path>
+        </svg>
+      </button>
+      <a href="/theme-designer/" class="btn btn-primary h-10 px-4">Make a theme</a>
     </div>
   </nav>
 </header>
@@ -75,32 +60,39 @@ import { menuLinks, siteConfig } from "@/site.config";
 <script>
   const dropdown = document.querySelector<HTMLElement>(".dropdown");
   const toggle = document.querySelector<HTMLButtonElement>("[data-mobile-menu-toggle]");
-
   function openMenu(open: boolean) {
     if (!dropdown) return;
     dropdown.classList.toggle("open", open);
     toggle?.setAttribute("aria-expanded", String(open));
   }
+  toggle?.addEventListener("click", (event) => { event.stopPropagation(); openMenu(!dropdown?.classList.contains("open")); });
+  document.addEventListener("click", (event) => { if (dropdown && !dropdown.contains(event.target as Node)) openMenu(false); });
+  document.addEventListener("keydown", (event) => { if (event.key === "Escape") openMenu(false); });
+  dropdown?.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => openMenu(false)));
 
-  toggle?.addEventListener("click", (event) => {
-    event.stopPropagation();
-    openMenu(!dropdown?.classList.contains("open"));
+  const themeToggle = document.querySelector<HTMLButtonElement>("[data-theme-toggle]");
+  const themeMeta = document.querySelector<HTMLMetaElement>("#theme-color");
+
+  function syncThemeToggle() {
+    const current = document.documentElement.dataset.theme === "light" ? "light" : "dark";
+    const target = current === "dark" ? "light" : "dark";
+    themeToggle?.setAttribute("aria-label", `Switch to ${target} mode`);
+    themeToggle?.setAttribute("title", `Switch to ${target} mode`);
+    themeToggle?.setAttribute("aria-pressed", String(current === "light"));
+    if (themeMeta) themeMeta.content = current === "light" ? "#fff9fc" : "#08090d";
+  }
+
+  function setTheme(theme: "light" | "dark") {
+    document.documentElement.dataset.theme = theme;
+    document.documentElement.style.colorScheme = theme;
+    try { localStorage.setItem("5bit-color-mode", theme); } catch {}
+    syncThemeToggle();
+  }
+
+  themeToggle?.addEventListener("click", () => {
+    const current = document.documentElement.dataset.theme === "light" ? "light" : "dark";
+    setTheme(current === "dark" ? "light" : "dark");
   });
 
-  document.addEventListener("click", (event) => {
-    if (dropdown && !dropdown.contains(event.target as Node)) {
-      openMenu(false);
-    }
-  });
-
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
-      openMenu(false);
-      toggle?.focus();
-    }
-  });
-
-  dropdown?.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => openMenu(false));
-  });
+  syncThemeToggle();
 </script>

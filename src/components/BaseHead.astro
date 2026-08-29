@@ -30,10 +30,11 @@ const twitterCardType = twitterCard ? twitterCard : "summary_large_image";
   rel="stylesheet"
 />
 
-{/* Theme Color — informs the browser UI about the app's background */}
+{/* Theme Color — kept in sync with the manual light/dark switch. */}
+<meta id="theme-color" content="#08090d" name="theme-color" />
 {/* Icons */}
 <link rel="icon" href="/favicon.png" type="image/png" />
-<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+<link rel="apple-touch-icon" href="/favicon.png" />
 <link rel="manifest" href="/manifest.webmanifest" />
 
 {/* Canonical URL */}
@@ -73,14 +74,5 @@ const twitterCardType = twitterCard ? twitterCard : "summary_large_image";
 
 {/* Sitemap */}
 <link href="/sitemap-index.xml" rel="sitemap" />
-
-{/* RSS auto-discovery */}
-<link href="/rss.xml" title="Blog" rel="alternate" type="application/rss+xml" />
-<link
-  href="/notes/rss.xml"
-  title="Notes"
-  rel="alternate"
-  type="application/rss+xml"
-/>
 
 <meta content={Astro.generator} name="generator" />

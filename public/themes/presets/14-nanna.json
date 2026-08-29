@@ -1,0 +1,36 @@
+{
+  "name": "Nanna",
+  "id": "5bit_nanna",
+  "author": "5bit",
+  "colorScheme": "light",
+  "colors": {
+    "base-100": "#F8F2FF",
+    "base-200": "#EADFFF",
+    "base-300": "#DCCBFF",
+    "base-content": "#281A41",
+    "primary": "#8B5CF6",
+    "primary-content": "#FFFFFF",
+    "secondary": "#C084FC",
+    "secondary-content": "#FFFFFF",
+    "accent": "#6366F1",
+    "accent-content": "#FFFFFF",
+    "neutral": "#24262D",
+    "neutral-content": "#F8F8FA",
+    "info": "#168BD2",
+    "info-content": "#FFFFFF",
+    "success": "#149C62",
+    "success-content": "#FFFFFF",
+    "warning": "#D78C00",
+    "warning-content": "#241700",
+    "error": "#DC3157",
+    "error-content": "#FFFFFF"
+  },
+  "effects": {
+    "radius-selector": "0.875rem",
+    "radius-field": "0.625rem",
+    "radius-box": "1.25rem",
+    "border": "1px",
+    "size-selector": "0.25rem",
+    "size-field": "0.25rem"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "Splash",
+  "id": "5bit_splash",
+  "author": "5bit",
+  "colorScheme": "light",
+  "colors": {
+    "base-100": "#F0FFFF",
+    "base-200": "#D9FAFA",
+    "base-300": "#C2F2F2",
+    "base-content": "#083239",
+    "primary": "#00B8C6",
+    "primary-content": "#FFFFFF",
+    "secondary": "#22D3EE",
+    "secondary-content": "#111318",
+    "accent": "#10B7A5",
+    "accent-content": "#FFFFFF",
+    "neutral": "#24262D",
+    "neutral-content": "#F8F8FA",
+    "info": "#168BD2",
+    "info-content": "#FFFFFF",
+    "success": "#149C62",
+    "success-content": "#FFFFFF",
+    "warning": "#D78C00",
+    "warning-content": "#241700",
+    "error": "#DC3157",
+    "error-content": "#FFFFFF"
+  },
+  "effects": {
+    "radius-selector": "0.875rem",
+    "radius-field": "0.625rem",
+    "radius-box": "1.25rem",
+    "border": "1px",
+    "size-selector": "0.25rem",
+    "size-field": "0.25rem"
+  }
+}

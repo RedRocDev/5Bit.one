@@ -1,0 +1,36 @@
+{
+  "name": "Dingus",
+  "id": "5bit_dingus",
+  "author": "5bit",
+  "colorScheme": "dark",
+  "colors": {
+    "base-100": "#05110C",
+    "base-200": "#071B13",
+    "base-300": "#0B2A1A",
+    "base-content": "#D9FFE8",
+    "primary": "#64FF80",
+    "primary-content": "#111318",
+    "secondary": "#E6FF49",
+    "secondary-content": "#111318",
+    "accent": "#FFB000",
+    "accent-content": "#111318",
+    "neutral": "#08090C",
+    "neutral-content": "#ECEEF4",
+    "info": "#38BDF8",
+    "info-content": "#051C29",
+    "success": "#34D399",
+    "success-content": "#06291F",
+    "warning": "#FBBF24",
+    "warning-content": "#2D1B00",
+    "error": "#FB7185",
+    "error-content": "#35050D"
+  },
+  "effects": {
+    "radius-selector": "0.125rem",
+    "radius-field": "0.125rem",
+    "radius-box": "0.25rem",
+    "border": "1px",
+    "size-selector": "0.25rem",
+    "size-field": "0.25rem"
+  }
+}

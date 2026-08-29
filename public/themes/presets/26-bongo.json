@@ -1,0 +1,36 @@
+{
+  "name": "Bongo",
+  "id": "5bit_bongo",
+  "author": "5bit",
+  "colorScheme": "dark",
+  "colors": {
+    "base-100": "#0B0920",
+    "base-200": "#15103A",
+    "base-300": "#21185B",
+    "base-content": "#F5F0FF",
+    "primary": "#6C5CE7",
+    "primary-content": "#FFFFFF",
+    "secondary": "#A78BFA",
+    "secondary-content": "#FFFFFF",
+    "accent": "#FF5A6F",
+    "accent-content": "#FFFFFF",
+    "neutral": "#08090C",
+    "neutral-content": "#ECEEF4",
+    "info": "#38BDF8",
+    "info-content": "#051C29",
+    "success": "#34D399",
+    "success-content": "#06291F",
+    "warning": "#FBBF24",
+    "warning-content": "#2D1B00",
+    "error": "#FB7185",
+    "error-content": "#35050D"
+  },
+  "effects": {
+    "radius-selector": "0.375rem",
+    "radius-field": "0.25rem",
+    "radius-box": "0.5rem",
+    "border": "2px",
+    "size-selector": "0.25rem",
+    "size-field": "0.25rem"
+  }
+}

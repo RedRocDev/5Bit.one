@@ -1,0 +1,328 @@
+{
+  "pack": "5bit Theme Set",
+  "count": 40,
+  "light": 20,
+  "dark": 20,
+  "themes": [
+    {
+      "order": 1,
+      "name": "Brrr",
+      "id": "5bit_brrr",
+      "scheme": "light",
+      "file": "themes/presets/01-brrr.json",
+      "idea": "snow, glacier blue, frozen glass"
+    },
+    {
+      "order": 2,
+      "name": "Mango",
+      "id": "5bit_mango",
+      "scheme": "light",
+      "file": "themes/presets/02-mango.json",
+      "idea": "peach sky, hot orange, saturated pink"
+    },
+    {
+      "order": 3,
+      "name": "Conker",
+      "id": "5bit_conker",
+      "scheme": "light",
+      "file": "themes/presets/03-conker.json",
+      "idea": "burnt orange, mustard, fallen leaves"
+    },
+    {
+      "order": 4,
+      "name": "Bonk",
+      "id": "5bit_bonk",
+      "scheme": "light",
+      "file": "themes/presets/04-bonk.json",
+      "idea": "cool console gray with saturated purple controls"
+    },
+    {
+      "order": 5,
+      "name": "Pickle",
+      "id": "5bit_pickle",
+      "scheme": "light",
+      "file": "themes/presets/05-pickle.json",
+      "idea": "classic pea-green LCD family"
+    },
+    {
+      "order": 6,
+      "name": "Bubbles",
+      "id": "5bit_bubbles",
+      "scheme": "light",
+      "file": "themes/presets/06-bubbles.json",
+      "idea": "cute candy pink with violet"
+    },
+    {
+      "order": 7,
+      "name": "Banana",
+      "id": "5bit_banana",
+      "scheme": "light",
+      "file": "themes/presets/07-banana.json",
+      "idea": "banana yellow, orange, hard black contrast"
+    },
+    {
+      "order": 8,
+      "name": "Sonic",
+      "id": "5bit_sonic",
+      "scheme": "light",
+      "file": "themes/presets/08-sonic.json",
+      "idea": "white hardware, orange swirl energy, bright blue"
+    },
+    {
+      "order": 9,
+      "name": "Pogo",
+      "id": "5bit_pogo",
+      "scheme": "light",
+      "file": "themes/presets/09-pogo.json",
+      "idea": "gray console with red, blue and green button colors"
+    },
+    {
+      "order": 10,
+      "name": "Splash",
+      "id": "5bit_splash",
+      "scheme": "light",
+      "file": "themes/presets/10-splash.json",
+      "idea": "water, cyan glass, clean teal"
+    },
+    {
+      "order": 11,
+      "name": "Mojito",
+      "id": "5bit_mojito",
+      "scheme": "light",
+      "file": "themes/presets/11-mojito.json",
+      "idea": "fresh mint, emerald and lime"
+    },
+    {
+      "order": 12,
+      "name": "Fuzz",
+      "id": "5bit_fuzz",
+      "scheme": "light",
+      "file": "themes/presets/12-fuzz.json",
+      "idea": "peach, coral and fruit punch"
+    },
+    {
+      "order": 13,
+      "name": "Bonbon",
+      "id": "5bit_bonbon",
+      "scheme": "light",
+      "file": "themes/presets/13-bonbon.json",
+      "idea": "hard candy magenta, violet and cyan"
+    },
+    {
+      "order": 14,
+      "name": "Nanna",
+      "id": "5bit_nanna",
+      "scheme": "light",
+      "file": "themes/presets/14-nanna.json",
+      "idea": "lavender milk, purple bloom"
+    },
+    {
+      "order": 15,
+      "name": "Zesty",
+      "id": "5bit_zesty",
+      "scheme": "light",
+      "file": "themes/presets/15-zesty.json",
+      "idea": "lemon sherbet and electric lime"
+    },
+    {
+      "order": 16,
+      "name": "Shrimp",
+      "id": "5bit_shrimp",
+      "scheme": "light",
+      "file": "themes/presets/16-shrimp.json",
+      "idea": "coral reef red with turquoise"
+    },
+    {
+      "order": 17,
+      "name": "Bento",
+      "id": "5bit_bento",
+      "scheme": "light",
+      "file": "themes/presets/17-bento.json",
+      "idea": "cream, wine red and warm gold"
+    },
+    {
+      "order": 18,
+      "name": "Kiwi",
+      "id": "5bit_kiwi",
+      "scheme": "light",
+      "file": "themes/presets/18-kiwi.json",
+      "idea": "kiwi green with a wild magenta seed"
+    },
+    {
+      "order": 19,
+      "name": "Chutney",
+      "id": "5bit_chutney",
+      "scheme": "light",
+      "file": "themes/presets/19-chutney.json",
+      "idea": "ripe mango orange, hot coral, pink"
+    },
+    {
+      "order": 20,
+      "name": "Fizzy",
+      "id": "5bit_fizzy",
+      "scheme": "light",
+      "file": "themes/presets/20-fizzy.json",
+      "idea": "cherry soda, teal glass, cola brown"
+    },
+    {
+      "order": 21,
+      "name": "Spicy",
+      "id": "5bit_spicy",
+      "scheme": "dark",
+      "file": "themes/presets/21-spicy.json",
+      "idea": "molten red, orange and yellow"
+    },
+    {
+      "order": 22,
+      "name": "Moo",
+      "id": "5bit_moo",
+      "scheme": "dark",
+      "file": "themes/presets/22-moo.json",
+      "idea": "deep blue night with silver-violet moon glow"
+    },
+    {
+      "order": 23,
+      "name": "Gonzo",
+      "id": "5bit_gonzo",
+      "scheme": "dark",
+      "file": "themes/presets/23-gonzo.json",
+      "idea": "classic cyberpunk magenta, cyan and acid green"
+    },
+    {
+      "order": 24,
+      "name": "Gloop",
+      "id": "5bit_gloop",
+      "scheme": "dark",
+      "file": "themes/presets/24-gloop.json",
+      "idea": "pure neon-green terminal"
+    },
+    {
+      "order": 25,
+      "name": "Dingus",
+      "id": "5bit_dingus",
+      "scheme": "dark",
+      "file": "themes/presets/25-dingus.json",
+      "idea": "Pip-Boy-inspired phosphor green and amber"
+    },
+    {
+      "order": 26,
+      "name": "Bongo",
+      "id": "5bit_bongo",
+      "scheme": "dark",
+      "file": "themes/presets/26-bongo.json",
+      "idea": "indigo handheld shell, lavender and red buttons"
+    },
+    {
+      "order": 27,
+      "name": "Gravy",
+      "id": "5bit_gravy",
+      "scheme": "dark",
+      "file": "themes/presets/27-gravy.json",
+      "idea": "black console body, red stripe, electric blue"
+    },
+    {
+      "order": 28,
+      "name": "Biscuit",
+      "id": "5bit_biscuit",
+      "scheme": "dark",
+      "file": "themes/presets/28-biscuit.json",
+      "idea": "official 5bit neon pink-orange identity"
+    },
+    {
+      "order": 29,
+      "name": "Jelly",
+      "id": "5bit_jelly",
+      "scheme": "dark",
+      "file": "themes/presets/29-jelly.json",
+      "idea": "electric violet plasma with cyan"
+    },
+    {
+      "order": 30,
+      "name": "Bogey",
+      "id": "5bit_bogey",
+      "scheme": "dark",
+      "file": "themes/presets/30-bogey.json",
+      "idea": "acid yellow-green hazard palette"
+    },
+    {
+      "order": 31,
+      "name": "Snooze",
+      "id": "5bit_snooze",
+      "scheme": "dark",
+      "file": "themes/presets/31-snooze.json",
+      "idea": "saturated cobalt night"
+    },
+    {
+      "order": 32,
+      "name": "Toast",
+      "id": "5bit_toast",
+      "scheme": "dark",
+      "file": "themes/presets/32-toast.json",
+      "idea": "coal, fire orange and ember pink"
+    },
+    {
+      "order": 33,
+      "name": "Plop",
+      "id": "5bit_plop",
+      "scheme": "dark",
+      "file": "themes/presets/33-plop.json",
+      "idea": "deep ocean black, cyan and electric blue"
+    },
+    {
+      "order": 34,
+      "name": "Wibble",
+      "id": "5bit_wibble",
+      "scheme": "dark",
+      "file": "themes/presets/34-wibble.json",
+      "idea": "gem purple, violet and pink"
+    },
+    {
+      "order": 35,
+      "name": "Beetroot",
+      "id": "5bit_beetroot",
+      "scheme": "dark",
+      "file": "themes/presets/35-beetroot.json",
+      "idea": "black-red lunar eclipse"
+    },
+    {
+      "order": 36,
+      "name": "Boing",
+      "id": "5bit_boing",
+      "scheme": "dark",
+      "file": "themes/presets/36-boing.json",
+      "idea": "RGB arcade cabinet energy"
+    },
+    {
+      "order": 37,
+      "name": "Flump",
+      "id": "5bit_flump",
+      "scheme": "dark",
+      "file": "themes/presets/37-flump.json",
+      "idea": "vaporwave pink, purple and cyan"
+    },
+    {
+      "order": 38,
+      "name": "Snot",
+      "id": "5bit_snot",
+      "scheme": "dark",
+      "file": "themes/presets/38-snot.json",
+      "idea": "radiation yellow and fluorescent green"
+    },
+    {
+      "order": 39,
+      "name": "Noodle",
+      "id": "5bit_noodle",
+      "scheme": "dark",
+      "file": "themes/presets/39-noodle.json",
+      "idea": "deep space indigo, nebula pink and blue"
+    },
+    {
+      "order": 40,
+      "name": "Zap",
+      "id": "5bit_zap",
+      "scheme": "dark",
+      "file": "themes/presets/40-zap.json",
+      "idea": "red and blue laser light on black"
+    }
+  ]
+}

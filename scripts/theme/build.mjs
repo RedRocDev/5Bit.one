@@ -99,7 +99,7 @@ ${css.trim()}
 `;
 
 const page = `---
-// NeoStation Theme Designer — route: /theme-designer/.
+// 5bit Theme Designer — route: /theme-designer/.
 // GENERATED from scripts/theme/source.html by scripts/theme/build.mjs.
 // Do not edit by hand — edit source.html and run \`npm run build:theme\`.
 import Base from "@/layouts/Base.astro";
@@ -110,9 +110,9 @@ import "@/styles/components/theme-designer.css";
 import type { SiteMeta } from "@/types";
 
 const meta: SiteMeta = {
-  title: "Theme Designer - NeoStation",
+  title: "Theme Designer",
   description:
-    "Design a NeoStation theme with a live preview of the System Browser and Game Detail screens, then export it as theme JSON built on daisyUI tokens and share it in our Discord.",
+    "Design a 5bit theme with a live preview of the System Browser and Game Detail screens, then export it as theme JSON built on daisyUI tokens and save or share the exported JSON.",
 };
 ---
 
@@ -128,15 +128,9 @@ const meta: SiteMeta = {
         </h1>
         <div class="max-w-3xl mx-auto">
           <p class="text-lg md:text-xl text-base-content/60 leading-relaxed">
-            Design your own NeoStation theme with a live preview of the System
+            Design your own 5bit theme with a live preview of the System
             Browser and Game Detail screens, then export it as theme JSON built
-            on daisyUI colour and radius tokens. Share your themes with the
-            community in our
-            <a
-              href="https://discord.gg/xE2kgKsRVq"
-              target="_blank"
-              rel="noopener"
-              class="text-primary hover:underline">Discord server</a>.
+            on colour and radius tokens. Save it, tweak it, or share the JSON wherever you like.
           </p>
         </div>
       </div>

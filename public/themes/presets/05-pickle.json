@@ -1,0 +1,36 @@
+{
+  "name": "Pickle",
+  "id": "5bit_pickle",
+  "author": "5bit",
+  "colorScheme": "light",
+  "colors": {
+    "base-100": "#E7E9A6",
+    "base-200": "#D4D887",
+    "base-300": "#BDC768",
+    "base-content": "#1F2B15",
+    "primary": "#365A31",
+    "primary-content": "#FFFFFF",
+    "secondary": "#5E7D39",
+    "secondary-content": "#FFFFFF",
+    "accent": "#8DA33A",
+    "accent-content": "#FFFFFF",
+    "neutral": "#24262D",
+    "neutral-content": "#F8F8FA",
+    "info": "#168BD2",
+    "info-content": "#FFFFFF",
+    "success": "#149C62",
+    "success-content": "#FFFFFF",
+    "warning": "#D78C00",
+    "warning-content": "#241700",
+    "error": "#DC3157",
+    "error-content": "#FFFFFF"
+  },
+  "effects": {
+    "radius-selector": "0rem",
+    "radius-field": "0rem",
+    "radius-box": "0rem",
+    "border": "2px",
+    "size-selector": "0.25rem",
+    "size-field": "0.25rem"
+  }
+}

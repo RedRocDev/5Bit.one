@@ -1,0 +1,36 @@
+{
+  "name": "Snooze",
+  "id": "5bit_snooze",
+  "author": "5bit",
+  "colorScheme": "dark",
+  "colors": {
+    "base-100": "#020612",
+    "base-200": "#050B1F",
+    "base-300": "#081334",
+    "base-content": "#E8F1FF",
+    "primary": "#2F6BFF",
+    "primary-content": "#FFFFFF",
+    "secondary": "#00B8FF",
+    "secondary-content": "#FFFFFF",
+    "accent": "#8B5CF6",
+    "accent-content": "#FFFFFF",
+    "neutral": "#08090C",
+    "neutral-content": "#ECEEF4",
+    "info": "#38BDF8",
+    "info-content": "#051C29",
+    "success": "#34D399",
+    "success-content": "#06291F",
+    "warning": "#FBBF24",
+    "warning-content": "#2D1B00",
+    "error": "#FB7185",
+    "error-content": "#35050D"
+  },
+  "effects": {
+    "radius-selector": "0.5rem",
+    "radius-field": "0.375rem",
+    "radius-box": "0.625rem",
+    "border": "1px",
+    "size-selector": "0.25rem",
+    "size-field": "0.25rem"
+  }
+}

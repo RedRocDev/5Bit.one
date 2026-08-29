@@ -1,0 +1,36 @@
+{
+  "name": "Bubbles",
+  "id": "5bit_bubbles",
+  "author": "5bit",
+  "colorScheme": "light",
+  "colors": {
+    "base-100": "#FFF0F8",
+    "base-200": "#FFD9ED",
+    "base-300": "#FFC3E3",
+    "base-content": "#46122F",
+    "primary": "#FF3696",
+    "primary-content": "#FFFFFF",
+    "secondary": "#FF77C4",
+    "secondary-content": "#FFFFFF",
+    "accent": "#A855F7",
+    "accent-content": "#FFFFFF",
+    "neutral": "#24262D",
+    "neutral-content": "#F8F8FA",
+    "info": "#168BD2",
+    "info-content": "#FFFFFF",
+    "success": "#149C62",
+    "success-content": "#FFFFFF",
+    "warning": "#D78C00",
+    "warning-content": "#241700",
+    "error": "#DC3157",
+    "error-content": "#FFFFFF"
+  },
+  "effects": {
+    "radius-selector": "9999px",
+    "radius-field": "1rem",
+    "radius-box": "1.5rem",
+    "border": "1px",
+    "size-selector": "0.25rem",
+    "size-field": "0.25rem"
+  }
+}

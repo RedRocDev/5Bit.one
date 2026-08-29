@@ -1,51 +1,35 @@
-# NeoStation Official Website
+# 5bit.one
 
-This repository contains the source code for the official NeoStation landing page, accessible at [neostation.dev](https://neostation.dev).
+Official website source for **5bit**, a gaming frontend concept focused on bringing games from different platforms, launchers, and systems into one consistent interface.
 
-## Technology Stack
+Production domain: **https://5bit.one/**
 
-- **Framework:** [Astro](https://astro.build/)
-- **Styling:** Tailwind CSS
-- **Deployment:** Automated via Dokploy
-- **Infrastructure:** Private VPS
+## Stack
 
-## Project Structure
+- Astro
+- Tailwind CSS
+- TypeScript
+- GitHub repository: `RedRocDev/5Bit.one`
 
-This is a standard Astro project. The main content and components can be found in the `/src` directory. Static assets such as images and fonts are located in the `/public` directory.
+## Local development
 
-## Development
-
-To run the project locally:
-
-```bash
-# Install dependencies
-npm install
-
-# Start the development server
-npm run dev
-
-# Build for production
-npm run build
+```powershell
+npm.cmd install
+npm.cmd run dev
 ```
 
-## Deployment Workflow
+Astro normally serves the local site at `http://localhost:4321`.
 
-The deployment is fully automated. Any push or merge to the `main` branch triggers a deployment via Dokploy to our production VPS.
+## Build
 
-Please ensure all changes are tested locally before merging into the main branch to avoid downtime on the live site.
+```powershell
+npm.cmd run build
+```
 
-## Contributions
+## Project status
 
-We welcome community contributions to improve the website's content, performance, or design.
+The website and product direction are under active development. The Downloads page intentionally does not point at binaries from another project; 5bit release links should only be enabled when 5bit-owned builds are published.
 
-1. Fork the repository.
-2. Create a feature branch.
-3. Submit a Pull Request with a detailed description of your changes.
+## Imported-source notice
 
-For significant design changes, please open an Issue first to discuss your ideas with the team.
-
-## Licensing
-
-- **This website (source code):** [MIT License](./LICENSE.md)
-- **NeoStation application (Flutter frontend):** [GPL v3](https://github.com/mmisobadev/neostation-frontend/blob/main/LICENSE.md)
-- **Branding and Design:** The visual identity, logos, and copywriting are protected assets of the NeoStation project.
+This repository began from an MIT-licensed NeoStation website snapshot and has since been reworked for 5bit. The original MIT notice is retained in `LICENSE.md` as required. See `THIRD_PARTY_NOTICES.md` for remaining imported data/assets that still need provenance review or replacement.

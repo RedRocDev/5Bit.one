@@ -1,0 +1,36 @@
+{
+  "name": "Bonbon",
+  "id": "5bit_bonbon",
+  "author": "5bit",
+  "colorScheme": "light",
+  "colors": {
+    "base-100": "#FFF7FD",
+    "base-200": "#F8E2FF",
+    "base-300": "#E8D8FF",
+    "base-content": "#351638",
+    "primary": "#FF2CB1",
+    "primary-content": "#FFFFFF",
+    "secondary": "#7C3AED",
+    "secondary-content": "#FFFFFF",
+    "accent": "#22D3EE",
+    "accent-content": "#111318",
+    "neutral": "#24262D",
+    "neutral-content": "#F8F8FA",
+    "info": "#168BD2",
+    "info-content": "#FFFFFF",
+    "success": "#149C62",
+    "success-content": "#FFFFFF",
+    "warning": "#D78C00",
+    "warning-content": "#241700",
+    "error": "#DC3157",
+    "error-content": "#FFFFFF"
+  },
+  "effects": {
+    "radius-selector": "9999px",
+    "radius-field": "1rem",
+    "radius-box": "1.5rem",
+    "border": "1px",
+    "size-selector": "0.25rem",
+    "size-field": "0.25rem"
+  }
+}

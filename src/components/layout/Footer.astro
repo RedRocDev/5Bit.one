@@ -3,65 +3,22 @@ import { Icon } from "astro-icon/components";
 import { siteConfig } from "@/site.config";
 
 const year = new Date().getFullYear();
-
-const titleClass = "text-xs font-semibold uppercase tracking-widest text-base-content/40";
-const linkClass =
-  "text-sm text-base-content/60 transition-colors hover:text-primary";
+const titleClass = "text-xs font-semibold uppercase tracking-[0.18em] text-base-content/40";
+const linkClass = "text-sm text-base-content/60 transition-colors hover:text-primary";
 ---
 
-<footer class="border-t border-base-300 bg-base-200 px-6 py-14">
-  <div class="mx-auto grid max-w-7xl gap-10 sm:grid-cols-2 lg:grid-cols-4">
+<footer class="border-t border-base-300 bg-base-200/80 px-6 py-14">
+  <div class="mx-auto grid max-w-7xl gap-10 sm:grid-cols-2 lg:grid-cols-[1.3fr_0.8fr_0.8fr_0.8fr]">
     <div>
       <a href="/" class="inline-flex items-center">
-        <img
-          src="/neostation-logo-dark-v2.webp"
-          alt={siteConfig.title}
-          class="h-8 w-auto"
-          width="160"
-          height="40"
-        />
+        <img src="/5bit-logo.png" alt={siteConfig.title} class="h-8 w-auto" width="1758" height="663" />
       </a>
-      <p class="mt-4 max-w-xs text-sm leading-relaxed text-base-content/50">
-        A modern, user-centric frontend for retro gaming. The app is open source
-        under <strong class="text-base-content/70">GPL v3</strong>; this website
-        is <strong class="text-base-content/70">MIT</strong> licensed.
+      <p class="mt-4 max-w-sm text-sm leading-relaxed text-base-content/50">
+        One interface for the games, systems, and tools that make up your collection.
       </p>
       <div class="mt-5 flex items-center gap-2">
-        <a
-          href="https://github.com/misobadev/neostation-frontend"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-base-300 bg-base-100 text-base-content/60 transition hover:border-primary/50 hover:text-primary"
-          aria-label="NeoStation on GitHub"
-        >
+        <a href="https://github.com/RedRocDev/5Bit.one" target="_blank" rel="noopener noreferrer" class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-base-300 bg-base-100 text-base-content/60 transition hover:border-primary/50 hover:text-primary" aria-label="5bit on GitHub">
           <Icon name="simple-icons:github" class="h-4 w-4" />
-        </a>
-        <a
-          href="https://discord.gg/xE2kgKsRVq"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-base-300 bg-base-100 text-base-content/60 transition hover:border-primary/50 hover:text-primary"
-          aria-label="NeoStation on Discord"
-        >
-          <Icon name="simple-icons:discord" class="h-4 w-4" />
-        </a>
-        <a
-          href="https://ko-fi.com/neostation"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-base-300 bg-base-100 text-base-content/60 transition hover:border-primary/50 hover:text-primary"
-          aria-label="Support NeoStation on Ko-fi"
-        >
-          <Icon name="simple-icons:kofi" class="h-4 w-4" />
-        </a>
-        <a
-          href="https://www.patreon.com/cw/NeoStation"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-base-300 bg-base-100 text-base-content/60 transition hover:border-primary/50 hover:text-primary"
-          aria-label="Become a Patron on Patreon"
-        >
-          <Icon name="simple-icons:patreon" class="h-4 w-4" />
         </a>
       </div>
     </div>
@@ -74,22 +31,23 @@ const linkClass =
     </nav>
 
     <nav class="flex flex-col gap-2.5">
-      <h6 class={titleClass}>Community</h6>
-      <a href="https://github.com/misobadev/neostation-frontend" target="_blank" rel="noopener noreferrer" class={linkClass}>GitHub</a>
-      <a href="https://discord.gg/xE2kgKsRVq" target="_blank" rel="noopener noreferrer" class={linkClass}>Discord</a>
+      <h6 class={titleClass}>Create</h6>
       <a href="/theme-designer/" class={linkClass}>Theme Designer</a>
+      <a href="/guide/#folder-compatibility" class={linkClass}>Folder Structure</a>
     </nav>
 
     <nav class="flex flex-col gap-2.5">
-      <h6 class={titleClass}>Support</h6>
-      <a href="https://ko-fi.com/neostation" target="_blank" rel="noopener noreferrer" class={linkClass}>Ko-fi</a>
-      <a href="https://www.patreon.com/cw/NeoStation" target="_blank" rel="noopener noreferrer" class={linkClass}>Patreon</a>
-      <a href="https://github.com/misobadev/neostation-frontend/issues" target="_blank" rel="noopener noreferrer" class={linkClass}>Report an issue</a>
+      <h6 class={titleClass}>Project</h6>
+      <a href="https://github.com/RedRocDev/5Bit.one" target="_blank" rel="noopener noreferrer" class={linkClass}>GitHub</a>
+      <a href="https://github.com/RedRocDev/5Bit.one/issues" target="_blank" rel="noopener noreferrer" class={linkClass}>Report an issue</a>
     </nav>
   </div>
 
-  <div class="mx-auto mt-12 flex max-w-7xl flex-col items-center justify-between gap-3 border-t border-base-300 pt-8 text-xs text-base-content/40 sm:flex-row">
-    <span>&copy; {year} {siteConfig.title}. All rights reserved.</span>
-    <span>Made for the retro community.</span>
+  <div class="mx-auto mt-12 max-w-4xl border-t border-base-300 pt-8 text-center">
+    <h6 class="text-[11px] font-bold uppercase tracking-[0.24em] text-primary">Disclaimer</h6>
+    <p class="mx-auto mt-3 text-xs leading-6 text-base-content/40">
+      5bit is an independent gaming frontend and is not affiliated with or endorsed by Nintendo, Sony, Microsoft, Sega, Valve, or other platform holders. 5bit does not provide copyrighted games, ROMs, BIOS/firmware, keys, or other protected game content. Users are responsible for obtaining and using their games and software lawfully. Product names, logos, trademarks, and other third-party assets belong to their respective owners. Compatibility references do not imply endorsement. 5bit is provided as-is without warranty.
+    </p>
+    <p class="mt-6 text-xs text-base-content/35">&copy; {year} {siteConfig.title}. All rights reserved.</p>
   </div>
 </footer>

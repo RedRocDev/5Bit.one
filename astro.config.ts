@@ -26,9 +26,6 @@ export default defineConfig({
 		assets: "_astro",
 		inlineStylesheets: "never",
 	},
-	image: {
-		domains: ["neostation.dev"],
-	},
 	integrations: [
 		expressiveCode(expressiveCodeOptions),
 		icon(),
@@ -38,7 +35,7 @@ export default defineConfig({
 		webmanifest({
 			// See: https://github.com/alextim/astro-lib/blob/main/packages/astro-webmanifest/README.md
 			name: siteConfig.title,
-			short_name: "NeoStation", // optional
+			short_name: "5bit",
 			description: siteConfig.description,
 			lang: siteConfig.lang,
 			icon: "public/favicon.png", // the source for generating favicon & icons
@@ -60,8 +57,8 @@ export default defineConfig({
 				},
 			],
 			start_url: "/",
-			background_color: "#1d2024",
-			theme_color: "#2fa593",
+			background_color: "#08090d",
+			theme_color: "#ff2d95",
 			display: "standalone",
 			config: {
 				insertFaviconLinks: false,

@@ -3,7 +3,7 @@ import type { SiteConfig } from "@/types";
 
 export const siteConfig: SiteConfig = {
 	// Used as both a meta property (src/components/BaseHead.astro L:31 + L:49) & the generated satori png (src/pages/og-image/[slug].png.ts)
-	author: "Miguel Soto",
+	author: "RedRocDev",
 	// Date.prototype.toLocaleDateString() parameters, found in src/utils/date.ts.
 	date: {
 		locale: "en-US",
@@ -15,7 +15,7 @@ export const siteConfig: SiteConfig = {
 	},
 	// Used as the default description meta property and webmanifest description
 	description:
-		"NeoStation is a modern, user-centric frontend for retro gaming that prioritizes exceptional UX/UI design and seamless cross-platform compatibility.",
+		"5bit brings games from different platforms, launchers, and systems together in one consistent gaming experience.",
 	// HTML lang property, found in src/layouts/Base.astro L:18 & astro.config.ts L:48
 	lang: "en-US",
 	// Meta property, found in src/components/BaseHead.astro L:42
@@ -26,9 +26,9 @@ export const siteConfig: SiteConfig = {
 		- The link value found in src/components/layout/Header.astro L:35
 		- In the footer found in src/components/layout/Footer.astro L:12
 	*/
-	title: "NeoStation",
+	title: "5bit",
 	// ! Please remember to replace the following site property with your own domain, used in astro.config.ts
-	url: "https://neostation.dev/",
+	url: "https://5bit.one/",
 };
 
 // Used to generate links in both the Header & Footer.

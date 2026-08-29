@@ -1,0 +1,36 @@
+{
+  "name": "Flump",
+  "id": "5bit_flump",
+  "author": "5bit",
+  "colorScheme": "dark",
+  "colors": {
+    "base-100": "#0C0717",
+    "base-200": "#160B28",
+    "base-300": "#22103A",
+    "base-content": "#FFF2FF",
+    "primary": "#FF5AC8",
+    "primary-content": "#FFFFFF",
+    "secondary": "#7C5CFF",
+    "secondary-content": "#FFFFFF",
+    "accent": "#00E5FF",
+    "accent-content": "#111318",
+    "neutral": "#08090C",
+    "neutral-content": "#ECEEF4",
+    "info": "#38BDF8",
+    "info-content": "#051C29",
+    "success": "#34D399",
+    "success-content": "#06291F",
+    "warning": "#FBBF24",
+    "warning-content": "#2D1B00",
+    "error": "#FB7185",
+    "error-content": "#35050D"
+  },
+  "effects": {
+    "radius-selector": "0.875rem",
+    "radius-field": "0.625rem",
+    "radius-box": "1.25rem",
+    "border": "1px",
+    "size-selector": "0.25rem",
+    "size-field": "0.25rem"
+  }
+}

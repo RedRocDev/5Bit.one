@@ -1,0 +1,36 @@
+{
+  "name": "Spicy",
+  "id": "5bit_spicy",
+  "author": "5bit",
+  "colorScheme": "dark",
+  "colors": {
+    "base-100": "#120604",
+    "base-200": "#1D0905",
+    "base-300": "#2B0E08",
+    "base-content": "#FFF3E8",
+    "primary": "#FF3B0A",
+    "primary-content": "#FFFFFF",
+    "secondary": "#FF7900",
+    "secondary-content": "#FFFFFF",
+    "accent": "#FFD000",
+    "accent-content": "#111318",
+    "neutral": "#08090C",
+    "neutral-content": "#ECEEF4",
+    "info": "#38BDF8",
+    "info-content": "#051C29",
+    "success": "#34D399",
+    "success-content": "#06291F",
+    "warning": "#FBBF24",
+    "warning-content": "#2D1B00",
+    "error": "#FB7185",
+    "error-content": "#35050D"
+  },
+  "effects": {
+    "radius-selector": "0.75rem",
+    "radius-field": "0.5rem",
+    "radius-box": "0.75rem",
+    "border": "2px",
+    "size-selector": "0.3125rem",
+    "size-field": "0.3125rem"
+  }
+}

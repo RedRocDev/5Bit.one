@@ -1,0 +1,36 @@
+{
+  "name": "Bento",
+  "id": "5bit_bento",
+  "author": "5bit",
+  "colorScheme": "light",
+  "colors": {
+    "base-100": "#FFF8E8",
+    "base-200": "#F0E5CF",
+    "base-300": "#DFCFB5",
+    "base-content": "#351B18",
+    "primary": "#A92128",
+    "primary-content": "#FFFFFF",
+    "secondary": "#D7B05B",
+    "secondary-content": "#FFFFFF",
+    "accent": "#8D1A22",
+    "accent-content": "#FFFFFF",
+    "neutral": "#24262D",
+    "neutral-content": "#F8F8FA",
+    "info": "#168BD2",
+    "info-content": "#FFFFFF",
+    "success": "#149C62",
+    "success-content": "#FFFFFF",
+    "warning": "#D78C00",
+    "warning-content": "#241700",
+    "error": "#DC3157",
+    "error-content": "#FFFFFF"
+  },
+  "effects": {
+    "radius-selector": "0.375rem",
+    "radius-field": "0.25rem",
+    "radius-box": "0.5rem",
+    "border": "2px",
+    "size-selector": "0.25rem",
+    "size-field": "0.25rem"
+  }
+}
