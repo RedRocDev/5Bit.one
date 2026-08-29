@@ -1,51 +1,54 @@
-# NeoStation Official Website
+# 5bit.one website
 
-This repository contains the source code for the official NeoStation landing page, accessible at [neostation.dev](https://neostation.dev).
+The public website for **5bit**, a universal gaming home in development. Production is published at [5bit.one](https://5bit.one).
 
-## Technology Stack
+This is the website repository, not the 5bit application. Product features described on the site are labelled as planned or coming later until supported builds exist.
 
-- **Framework:** [Astro](https://astro.build/)
-- **Styling:** Tailwind CSS
-- **Deployment:** Automated via Dokploy
-- **Infrastructure:** Private VPS
+## Stack
 
-## Project Structure
-
-This is a standard Astro project. The main content and components can be found in the `/src` directory. Static assets such as images and fonts are located in the `/public` directory.
+- Astro 6 with TypeScript
+- Tailwind CSS 4
+- Pagefind static search infrastructure
+- Astro sitemap, robots, and webmanifest integrations
+- GitHub Pages deployed by GitHub Actions
 
 ## Development
 
-To run the project locally:
+Node 24 is specified in `.nvmrc`.
 
-```bash
-# Install dependencies
-npm install
-
-# Start the development server
+```sh
+npm ci
 npm run dev
-
-# Build for production
-npm run build
 ```
 
-## Deployment Workflow
+Quality and production commands:
 
-The deployment is fully automated. Any push or merge to the `main` branch triggers a deployment via Dokploy to our production VPS.
+```sh
+npm run lint
+npm run check
+npm run build
+npm run preview
+```
 
-Please ensure all changes are tested locally before merging into the main branch to avoid downtime on the live site.
+`npm run build` writes the static site to `dist/` and then creates the Pagefind index.
 
-## Contributions
+## Repository structure
 
-We welcome community contributions to improve the website's content, performance, or design.
+- `src/pages/` — public routes
+- `src/components/` — shared page chrome and metadata
+- `src/styles/` — baseline design utilities
+- `public/` — static assets, `CNAME`, and browser resources
+- `.github/workflows/` — continuous integration and Pages deployment
+- `docs/architecture/` — architectural decisions and technical debt
 
-1. Fork the repository.
-2. Create a feature branch.
-3. Submit a Pull Request with a detailed description of your changes.
+## Deployment
 
-For significant design changes, please open an Issue first to discuss your ideas with the team.
+Pushes to `main` run install, lint, Astro/type checks, and the production build. The resulting `dist/` directory is uploaded as a GitHub Pages artifact and deployed with least-privilege Pages permissions. Pull requests run CI but do not deploy production.
 
-## Licensing
+The canonical origin is `https://5bit.one`; this apex custom domain does not use a repository-path base URL. `public/CNAME` preserves the custom-domain declaration in the deployed artifact.
 
-- **This website (source code):** [MIT License](./LICENSE.md)
-- **NeoStation application (Flutter frontend):** [GPL v3](https://github.com/mmisobadev/neostation-frontend/blob/main/LICENSE.md)
-- **Branding and Design:** The visual identity, logos, and copywriting are protected assets of the NeoStation project.
+## Licence and source attribution
+
+This codebase began from the MIT-licensed [`misobadev/neostation-web`](https://github.com/misobadev/neostation-web) website. Its MIT copyright notice is preserved in [`LICENSE.md`](LICENSE.md). Public product branding, copy, links, logos, screenshots, and product-specific services from that source were removed; no application code was imported.
+
+See [`docs/architecture/website-baseline.md`](docs/architecture/website-baseline.md) for the complete baseline record.
